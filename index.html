@@ -2,16 +2,24 @@
 <html lang="ru">
 
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>HTML Academy: Глейси</title>
 </head>
 
 <body>
   <header class="main-header">
-    <img src="https://via.placeholder.com/154x64" alt="Лого Глейси" width="154" height="64" />
+    <a href=""><img src="https://via.placeholder.com/154x64" alt="Лого Глейси" width="154" height="64" /></a>
     <nav class="main-header-nav">
       <ul>
-        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="catalog.html">Каталог</a>
+          <ul class="sub-menu">
+            <li><a href="catalog.html">Новинки</a></li>
+            <li><a href="catalog.html">Сливочное</a></li>
+            <li><a href="catalog.html">Щербеты</a></li>
+            <li><a href="catalog.html">Фруктовый лед</a></li>
+            <li><a href="catalog.html">Мелорин</a></li>
+          </ul>
+        </li>
         <li><a href="">Доставка и оплата</a></li>
         <li><a href="">О компании</a></li>
       </ul>
@@ -26,14 +34,12 @@
   </header>
   <main>
     <h1 class="visualy-hidden">Магазин мороженного "Gllacy"</h1>
-
-    <!-- <section class="main-visual">
-        <p class="main-visual-green">Крем-брюле и пломбир с малиновым джемом</p>
-        <p class="main-visual-blue">Шоколадный пломбир и лимонный сорбет</p>
-        <p class="main-visual-brown">Пломбир с помадкой и клубчний щербет</p>
-        <a href="catalog.html">Давайте оба!</a>
-      </section> -->
-
+    <section class="main-visual">
+      <h2 class="main-visual-green">Крем-брюле и пломбир с малиновым джемом</h2>
+      <h2 class="main-visual-blue">Шоколадный пломбир и лимонный сорбет</h2>
+      <h2 class="main-visual-brown">Пломбир с помадкой и клубчний щербет</h2>
+      <a href="catalog.html">Давайте оба!</a>
+    </section>
     <section class="advantages advantages-raspberries">
       <h2>Малинка даром!</h2>
       <p>
@@ -59,11 +65,12 @@
               width="267" height="267" />
           </a>
           <p class="best-sales-price">310 &#8381; <span>/кг</span></p>
-          <a href="catalog.html">
-            <h3 class="best-sales-descr">
+          <h3 class="best-sales-descr">
+            <a href="catalog.html">
               Сливочное с апельсиновым джемом и цитрусовой стружкой
-            </h3>
-          </a>
+            </a>
+          </h3>
+          <a class="best-sales-item-view" href="">Быстрый просмотр</a>
         </li>
         <li class="best-sales-item">
           <a href="catalog.html">
@@ -71,11 +78,12 @@
               height="267" />
           </a>
           <p class="best-sales-price">380 &#8381; <span>/кг</span></p>
-          <a href="catalog.html">
-            <h3 class="best-sales-descr">
+          <h3 class="best-sales-descr">
+            <a href="catalog.html">
               Сливочно-кофейное с кусочками шоколада
-            </h3>
-          </a>
+            </a>
+          </h3>
+          <a class="best-sales-item-view" href="">Быстрый просмотр</a>
         </li>
         <li>
           <a href="catalog.html">
@@ -83,11 +91,12 @@
               width="267" height="267" />
           </a>
           <p class="best-sales-price">355 &#8381; <span>/кг</span></p>
-          <a href="catalog.html">
-            <h3 class="best-sales-descr">
+          <h3 class="best-sales-descr">
+            <a href="catalog.html">
               Сливочно-клубничное с присыпкой из белого шоколада
-            </h3>
-          </a>
+            </a>
+          </h3>
+          <a class="best-sales-item-view" href="">Быстрый просмотр</a>
         </li>
         <li class="best-sales-item">
           <a href="catalog.html">
@@ -95,11 +104,12 @@
               width="267" height="267" />
           </a>
           <p class="best-sales-price">415 &#8381; <span>/кг</span></p>
-          <a href="catalog.html">
-            <h3 class="best-sales-descr">
+          <h3 class="best-sales-descr">
+            <a href="catalog.html">
               Сливочное крем-брюле с карамельной подливкой
-            </h3>
-          </a>
+            </a>
+          </h3>
+          <a class="best-sales-item-view" href="">Быстрый просмотр</a>
         </li>
       </ul>
     </section>
@@ -152,7 +162,7 @@
       </p>
       <form action="get">
         <input type="email" placeholder="email@example.com" />
-        <input type="submit" value="Отправить">
+        <button type="submit">Отправить</button>
       </form>
     </section>
     <section class="our-location">
@@ -193,9 +203,11 @@
       <li><a href="">Экологические стандарты</a></li>
     </ul>
     <div class="main-footer-copyright">
-      <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="https://via.placeholder.com/100x39"
-          alt="Лого HTML Academy" /></a>
-      <p>Сделано в HTML Academy &copy; 2019</p>
+      <a href="https://htmlacademy.ru/intensive/htmlcss">
+        <img src="https://via.placeholder.com/100x39" alt="Лого HTML Academy" />
+        Сделано в HTML Academy &copy; 2019
+      </a>
+
     </div>
   </footer>
 </body>
