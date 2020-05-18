@@ -45,11 +45,11 @@
     </div>
     <section class="filters">
       <h2>Сливочное мороженное</h2>
-      <form action="post">
+      <form method="post">
         <fieldset class="filters-sort">
           <legend>Сортировка:</legend>
           <select>
-            <option value="по популярности">по популярности</option>
+            <option value="popularity">по популярности</option>
           </select>
         </fieldset>
         <fieldset class="filters-price">
@@ -59,38 +59,38 @@
         <fieldset class="filters-fat">
           <legend>Жирность:</legend>
           <p>
-            <input type="radio" id="zero" name="fat-count">
+            <input type="radio" id="zero" name="fat-count" value="fat-zero">
             <label for="zero">0%</label>
           </p>
           <p>
-            <input type="radio" id="ten" name="fat-count">
+            <input type="radio" id="ten" name="fat-count" value="fat-ten">
             <label for="ten">до 10%</label>
           </p>
           <p>
-            <input type="radio" id="thirty-less" name="fat-count">
+            <input type="radio" id="thirty-less" name="fat-count" value="fat-thirty-less">
             <label for="thirty-less">до 30%</label>
           </p>
           <p>
-            <input type="radio" id="thirty-more" name="fat-count">
+            <input type="radio" id="thirty-more" name="fat-count" value="fat-thirty-more">
             <label for="thirty-more">выше 30%</label>
           </p>
         </fieldset>
         <fieldset class="filters-addons">
           <legend>Наполнители</legend>
           <p>
-            <input type="checkbox" id="chocolate">
+            <input type="checkbox" id="chocolate" value="add-chocolate">
             <label for="chocolate">шоколадные</label></p>
           <p>
-            <input type="checkbox" id="sugar">
+            <input type="checkbox" id="sugar" value="add-sugar">
             <label for="sugar">сахарные присыпки</label></p>
           <p>
-            <input type="checkbox" id="fruits">
+            <input type="checkbox" id="fruits" value="add-fruits">
             <label for="fruits">фрукты</label></p>
           <p>
-            <input type="checkbox" id="syrops">
+            <input type="checkbox" id="syrops" value="add-syrops">
             <label for="syrops">сиропы</label></p>
           <p>
-            <input type="checkbox" id="jam">
+            <input type="checkbox" id="jam" value="add-jam">
             <label for="jam">джемы</label></p>
         </fieldset>
         <button type="submit">Применить</button>
