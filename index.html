@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
+  <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Глейси</title>
 </head>
 
@@ -13,25 +14,65 @@
     </a>
     <nav class="main-header-nav">
       <ul>
-        <li>
+        <li class="pop-up-trigger">
           <a href="catalog.html">Каталог</a>
-          <ul class="sub-menu">
-            <li><a href="catalog.html">Новинки</a></li>
-            <li><a href="catalog.html">Сливочное</a></li>
-            <li><a href="catalog.html">Щербеты</a></li>
-            <li><a href="catalog.html">Фруктовый лед</a></li>
-            <li><a href="catalog.html">Мелорин</a></li>
+          <ul class="sub-menu pop-up">
+            <li>
+              <a href="catalog.html">Новинки</a>
+            </li>
+            <li>
+              <a href="catalog.html">Сливочное</a>
+            </li>
+            <li>
+              <a href="catalog.html">Щербеты</a>
+            </li>
+            <li>
+              <a href="catalog.html">Фруктовый лед</a>
+            </li>
+            <li>
+              <a href="catalog.html">Мелорин</a>
+            </li>
           </ul>
         </li>
         <li><a href="">Доставка и оплата</a></li>
         <li><a href="">О компании</a></li>
       </ul>
     </nav>
-    <div class="main-header-btns">
-      <input type="search" />
-      <button class="login-btn">Вход</button>
-      <button class="shopping-cart">Пусто</button>
-    </div>
+    <ul class="main-header-btns">
+      <li class="search pop-up-trigger">
+        <a href="#">
+          <span class="visually-hidden">Поиск</span>
+          <svg class="icon" width="16" height="16">
+            <use xlink:href="img/icons/btns-sprite.svg#loupe"></use>
+          </svg>
+        </a>
+        <form class="search-form pop-up" method="get" action="https://echo.htmlacademy.ru">
+          <input type="search" name="search" id="search" placeholder="Крем-брюле" />
+          <label class="visually-hidden" for="search">Поиск</label>
+        </form>
+      </li>
+      <li class="login pop-up-trigger">
+        <a href="">
+          <svg class="icon" width="16" height="16">
+            <use xlink:href="img/icons/btns-sprite.svg#entrance"></use>
+          </svg>
+          <span>Вход</span>
+        </a>
+        <form class="login-form pop-up" method="post" action="https://echo.htmlacademy.ru">
+          <input type="email" name="login-email" id="login-email" placeholder="email@example.com">
+          <label class="visually-hidden" for="login-email">Электронная почта</label>
+          <input type="password" name="login-password" id="login-password" placeholder="......">
+          <label class="visually-hidden" for="login-password">Пароль</label>
+          <button type="submit">Войти</button>
+          <a href="">Забыли пароль?</a>
+          <a href="">Новая регистрация</a>
+        </form>
+      </li>
+      <li class="shopping-cart">
+        <h2 class="visually-hidden">Корзина с товарами</h2>
+        <a href="">Пусто</a>
+      </li>
+    </ul>
     <p class="main-header-work-hours">с 10 по 20, ежедневно</p>
     <a href="tel:8-812-450-25-25" class="main-header-phone">8 812 450-25-25</a>
   </header>
@@ -162,7 +203,7 @@
         самого вкусного, что у нас происходит. Обещаем не спамить и не слать
         всякой ненужной ерунды. Честно =)
       </p>
-      <form method="post">
+      <form method="post" action="https://echo.htmlacademy.ru">
         <input type="email" placeholder="email@example.com" />
         <button type="submit">Отправить</button>
       </form>
@@ -179,6 +220,19 @@
         </p>
         <button>Форма обратной связи</button>
       </div>
+    </section>
+    <section class="subscription-form">
+      <h2 class="visually-hidden">Форма подтверждения рассылки</h2>
+      <form method="post" action="https://echo.htmlacademy.ru">
+        <h3>Мы обязательно вам ответим!</h3>
+        <input type="text" placeholder="Имя Фамилия" id="subscribe-name">
+        <label for="subscribe-name" class="visually-hidden">Имя Фамилия</label>
+        <input type="email" placeholder="email@example.com" id="subscribe-email">
+        <label for="subscribe-email" class="visually-hidden">Электронная почта</label>
+        <textarea id="subscribe-message" placeholder="В свободной форме"></textarea>
+        <label class="visually-hidden" for="subscribe-message">Ваше сообщение</label>
+        <button type="submit">Отправить</button>
+      </form>
     </section>
   </main>
   <footer class="main-footer">

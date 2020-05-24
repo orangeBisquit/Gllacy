@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
+  <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Глейси</title>
 </head>
 
@@ -13,27 +14,104 @@
     </a>
     <nav class="main-header-nav">
       <ul>
-        <li>
+        <li class="pop-up-trigger">
           <a href="catalog.html">Каталог</a>
-          <ul class="sub-menu">
-            <li><a href="catalog.html">Новинки</a></li>
-            <li><a href="catalog.html">Сливочное</a></li>
-            <li><a href="catalog.html">Щербеты</a></li>
-            <li><a href="catalog.html">Фруктовый лед</a></li>
-            <li><a href="catalog.html">Мелорин</a></li>
+          <ul class="sub-menu pop-up">
+            <li>
+              <a href="catalog.html">Новинки</a>
+            </li>
+            <li>
+              <a href="catalog.html">Сливочное</a>
+            </li>
+            <li>
+              <a href="catalog.html">Щербеты</a>
+            </li>
+            <li>
+              <a href="catalog.html">Фруктовый лед</a>
+            </li>
+            <li>
+              <a href="catalog.html">Мелорин</a>
+            </li>
           </ul>
         </li>
         <li><a href="">Доставка и оплата</a></li>
         <li><a href="">О компании</a></li>
       </ul>
     </nav>
-    <div class="main-header-btns">
-      <input type="search" />
-      <button class="login-btn">Вход</button>
-      <button class="shopping-cart">Пусто</button>
-    </div>
+    <ul class="main-header-btns">
+      <li class="search pop-up-trigger">
+        <a href="#">
+          <span class="visually-hidden">Поиск</span>
+          <svg class="icon" width="16" height="16">
+            <use xlink:href="img/icons/btns-sprite.svg#loupe"></use>
+          </svg>
+        </a>
+        <form class="search-form pop-up" method="get" action="https://echo.htmlacademy.ru">
+          <input type="search" name="search" id="search" placeholder="Крем-брюле" />
+          <label class="visually-hidden" for="search">Поиск</label>
+        </form>
+      </li>
+      <li class="login pop-up-trigger">
+        <a href="">
+          <svg class="icon" width="16" height="16">
+            <use xlink:href="img/icons/btns-sprite.svg#entrance"></use>
+          </svg>
+          <span>Вход</span>
+        </a>
+        <form class="login-form pop-up" method="post" action="https://echo.htmlacademy.ru">
+          <input type="email" name="login-email" id="login-email" placeholder="email@example.com">
+          <label class="visually-hidden" for="login-email">Электронная почта</label>
+          <input type="password" name="login-password" id="login-password" placeholder="......">
+          <label class="visually-hidden" for="login-password">Пароль</label>
+          <button type="submit">Войти</button>
+          <a href="">Забыли пароль?</a>
+          <a href="">Новая регистрация</a>
+        </form>
+      </li>
+      <li class="shopping-cart pop-up-trigger">
+        <h2 class="visually-hidden">Корзина с товарами</h2>
+        <a href="">2 товара</a>
+        <div class="pop-up">
+          <table>
+            <tr>
+              <td>
+                <button type="button" class="delete-cart-item">
+                  <span class="visually-hidden">Удалить товар</span>
+                </button>
+              </td>
+              <td>
+                <a href="#">
+                  <img src="img/ice-cream-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
+                </a>
+              </td>
+              <td>Пломбир с апельсиновым джемом</td>
+              <td>1,5 кг х <span>200 руб.</span></td>
+              <td>300 руб.</td>
+            </tr>
+            <tr>
+              <td>
+                <button type="button" class="delete-cart-item">
+                  <span class="visually-hidden">Удалить товар</span>
+                </button>
+              </td>
+              <td>
+                <a href="#">
+                  <img src="img/ice-cream-3.jpg" width="33" height="33"
+                    alt="Клубничный пломбир с присыпкой из белого шоколада">
+                </a>
+              </td>
+              <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+              <td>1,5 кг х <span>300 руб.</span></td>
+              <td>450 руб.</td>
+            </tr>
+          </table>
+          <span class="price-total">Итого:750 руб.</span>
+          <button type="button" class="order-btn">Оформить заказ</button>
+        </div>
+      </li>
+    </ul>
     <p class="main-header-work-hours">с 10 по 20, ежедневно</p>
-    <a href="tel:8-812-450-25-25">8 812 450-25-25</a>
+    <a href="tel:8-812-450-25-25" class="main-header-phone">8 812 450-25-25</a>
   </header>
   <main>
     <div class="breadcrumbs">
@@ -45,11 +123,14 @@
     </div>
     <section class="filters">
       <h2>Сливочное мороженное</h2>
-      <form method="post">
+      <form method="get" action="https://echo.htmlacademy.ru">
         <fieldset class="filters-sort">
           <legend>Сортировка:</legend>
           <select>
             <option value="popularity">по популярности</option>
+            <option value="cheap">сначала недорогие</option>
+            <option value="expensive">сначала дорогие</option>
+            <option value="fat-amount">по жирности</option>
           </select>
         </fieldset>
         <fieldset class="filters-price">
