@@ -1,6 +1,38 @@
-li {
+/* || Global */
+body {
+  font-family: Roboto, Verdana, sans-serif;
+  color: #fff;
+  font-size: 16px;
+}
+
+img {
+  height: auto;
+}
+
+.wrapper {
+  min-width: 1200px;
+  background-color: #9d8b84;
+}
+
+.container {
+  width: 1146px;
+  margin: 0 auto;
+}
+
+/* || Utilities */
+.no-bullets,
+.no-bullets ul {
   list-style: none;
 }
+
+.pop-up {
+  display: none;
+}
+
+.pop-up-trigger:hover .pop-up {
+  display: block;
+}
+
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
@@ -14,10 +46,4 @@ li {
   overflow: hidden;
 }
 
-.pop-up {
-  display: none;
-}
-
-.pop-up-trigger:hover .pop-up {
-  display: block;
-}
+/* \\ Header */
