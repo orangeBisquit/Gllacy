@@ -117,12 +117,14 @@ ul.no-bullets {
   background-color: var(--main-color);
   color: var(--main-color-dark);
   border-radius: 26px;
+  text-decoration: none;
 }
 
 .main-nav-item > a:active {
-  background-color: #d07058;
-  color: var(--main-color);
   border-radius: 26px;
+  background: #ededed;
+  box-shadow: inset 0px 2px 1px #696969;
+  text-decoration: none;
 }
 /* \ sub-menu */
 .sub-menu {
@@ -329,6 +331,7 @@ ul.no-bullets {
 
 .assortment-item img {
   border-radius: 50%;
+  background-color: var(--main-color-dark);
 }
 
 .assortment-price {
@@ -463,7 +466,7 @@ ul.no-bullets {
   display: none;
 }
 
-/* FOOTER */
+/* || FOOTER */
 .main-footer {
 }
 
@@ -487,8 +490,49 @@ ul.no-bullets {
   font-size: 13px;
   line-height: 18px;
 }
-.main-footer-nav a:hover {
+.main-footer-nav a:hover,
+.main-footer-copyright a:hover {
   color: var(--light-link-hover);
   text-decoration: underline;
   text-decoration-color: rgba(255, 188, 158, 0.3);
+}
+
+/* ---- catalog.html ----- */
+/* // MAIN NAV */
+
+.current-page {
+  background-color: #d07058;
+  color: var(--main-color);
+  border-radius: 26px;
+  text-decoration: none;
+}
+
+.current-sub-page {
+  background-color: #d07058;
+}
+/* \ page-nav */
+.pages-nav {
+  width: 194px;
+  height: 26px;
+}
+
+.pages-nav-item {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  color: var(--main-color);
+  text-decoration: none;
+  text-align: center;
+  line-height: 18px;
+  vertical-align: middle; /* Не работает */
+}
+
+.pages-nav-item:hover {
+  background-color: var(--transparent-light);
+}
+
+.current-page-num {
+  background-color: var(--main-color);
+  color: var(--main-color-dark);
 }
