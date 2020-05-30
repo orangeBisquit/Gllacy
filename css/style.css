@@ -27,6 +27,9 @@
   --icon-border: rgba(255, 255, 255, 0.5);
   --icon-border-hover: rgba(255, 255, 255, 0.7);
   --current-page-bg: #d07058;
+  --input-border: #d3d3d2;
+  --input-border-focus: rgba(46, 136, 228, 0.52);
+  --input-shadow: rgba(0, 0, 0, 0.4);
 }
 
 *,
@@ -318,6 +321,65 @@ ul.no-bullets {
 .header-btns .pop-up {
   right: 0;
   top: 36px;
+}
+
+.search-form,
+.login-form {
+  background: var(--subscribe-bg);
+  box-shadow: 0px 20px 20px var(--input-shadow);
+  border-radius: 4px;
+}
+.search-form input,
+.login-form input {
+  padding: 15px;
+  border: 1px solid var(--input-border);
+  border-radius: 4px;
+}
+
+.search-form input:hover,
+.login-form input:hover {
+  padding: 14px 15px;
+  border: 2px solid rgba(178, 178, 178, 0.52);
+}
+.search-form input:focus,
+.login-form input:focus {
+  line-height: 22px;
+  font-weight: 700;
+  outline: none;
+  padding: 14px 15px;
+  border: 2px solid var(--input-border-focus);
+}
+/* \\\ search pop-up */
+.search-form {
+  padding: 20px 15px;
+}
+.search-form input {
+  min-width: 312px;
+}
+/* \\\ login */
+.login-form {
+  padding: 20px 16px;
+}
+.login-bottom-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.login-links-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.login-form input {
+  min-width: 242px;
+  margin-bottom: 20px;
+}
+.login-form button {
+  outline: none;
+}
+.login-links-wrapper a {
+  font-size: 13px;
+  line-height: 15px;
+  color: var(--main-color-dark);
 }
 
 /* \ header-info */
