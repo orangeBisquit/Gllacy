@@ -13,86 +13,101 @@
   <div class="wrapper">
     <div class="container">
       <header class="header">
-        <a>
-          <img src="img/icons/logo.svg" alt="Логотип Глейси" width="154" height="64" />
-        </a>
-        <nav>
-          <ul class="main-nav no-bullets">
-            <li class="main-nav-item pop-up-trigger">
-              <a class="basic-link-light" href="">Каталог</a>
-              <ul class="sub-menu pop-up no-bullets">
-                <li class="sub-menu-item">
-                  <a>Новинки</a>
-                </li>
-                <li class="sub-menu-item">
-                  <a href="catalog.html">Сливочное</a>
-                </li>
-                <li class="sub-menu-item">
-                  <a href="">Щербеты</a>
-                </li>
-                <li class="sub-menu-item">
-                  <a href="">Фруктовый лед</a>
-                </li>
-                <li class="sub-menu-item">
-                  <a href="">Мелорин</a>
-                </li>
-              </ul>
+        <div class="header-top">
+          <a class="header-logo">
+            <img src="img/icons/logo.svg" alt="Логотип Глейси" width="154" height="64" />
+          </a>
+          <nav>
+            <ul class="main-nav no-bullets">
+              <li class="main-nav-item pop-up-trigger">
+                <a class="basic-link-light" href="">Каталог</a>
+                <ul class="sub-menu pop-up no-bullets">
+                  <li class="sub-menu-item">
+                    <a>Новинки</a>
+                  </li>
+                  <li class="sub-menu-item">
+                    <a href="catalog.html">Сливочное</a>
+                  </li>
+                  <li class="sub-menu-item">
+                    <a href="">Щербеты</a>
+                  </li>
+                  <li class="sub-menu-item">
+                    <a href="">Фруктовый лед</a>
+                  </li>
+                  <li class="sub-menu-item">
+                    <a href="">Мелорин</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="main-nav-item">
+                <a class="basic-link-light" href="">Доставка и оплата</a>
+              </li>
+              <li class="main-nav-item">
+                <a class="basic-link-light" href="">О компании</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="header-btns no-bullets">
+            <li class="search pop-up-trigger">
+              <a class="header-btn-item search-link" href="#">
+                <span class="visually-hidden">Поиск</span>
+                <svg class="icon" width="16" height="16">
+                  <use xlink:href="img/icons/btns-sprite.svg#loupe"></use>
+                </svg>
+              </a>
+              <form class="search-form pop-up" method="get" action="https://echo.htmlacademy.ru">
+                <input type="search" name="search" id="search" placeholder="Крем-брюле" />
+                <label class="visually-hidden" for="search">Поиск</label>
+              </form>
             </li>
-            <li class="main-nav-item">
-              <a class="basic-link-light" href="">Доставка и оплата</a>
+            <li class="login pop-up-trigger">
+              <a class="header-btn-item login-link" href="">
+                <svg class="icon" width="20" height="19">
+                  <use xlink:href="img/icons/btns-sprite.svg#entrance"></use>
+                </svg>
+                <span>Вход</span>
+              </a>
+              <form class="login-form pop-up" method="post" action="https://echo.htmlacademy.ru">
+                <input type="email" name="login-email" id="login-email" placeholder="email@example.com">
+                <label class="visually-hidden" for="login-email">Электронная почта</label>
+                <input type="password" name="login-password" id="login-password" placeholder="......">
+                <label class="visually-hidden" for="login-password">Пароль</label>
+                <button type="submit">Войти</button>
+                <a href="">Забыли пароль?</a>
+                <a href="">Новая регистрация</a>
+              </form>
             </li>
-            <li class="main-nav-item">
-              <a class="basic-link-light" href="">О компании</a>
+            <li class="shopping-cart">
+              <h2 class="visually-hidden">Корзина с товарами</h2>
+              <a class="header-btn-item shopping-cart-link" href="">Пусто</a>
             </li>
           </ul>
-        </nav>
-        <ul class="header-btns no-bullets">
-          <li class="search pop-up-trigger">
-            <a class="header-btn search-link" href="#">
-              <span class="visually-hidden">Поиск</span>
-              <svg class="icon" width="16" height="16">
-                <use xlink:href="img/icons/btns-sprite.svg#loupe"></use>
-              </svg>
-            </a>
-            <form class="search-form pop-up" method="get" action="https://echo.htmlacademy.ru">
-              <input type="search" name="search" id="search" placeholder="Крем-брюле" />
-              <label class="visually-hidden" for="search">Поиск</label>
-            </form>
-          </li>
-          <li class="login pop-up-trigger">
-            <a class="header-btn login-link" href="">
-              <svg class="icon" width="20" height="19">
-                <use xlink:href="img/icons/btns-sprite.svg#entrance"></use>
-              </svg>
-              <span>Вход</span>
-            </a>
-            <form class="login-form pop-up" method="post" action="https://echo.htmlacademy.ru">
-              <input type="email" name="login-email" id="login-email" placeholder="email@example.com">
-              <label class="visually-hidden" for="login-email">Электронная почта</label>
-              <input type="password" name="login-password" id="login-password" placeholder="......">
-              <label class="visually-hidden" for="login-password">Пароль</label>
-              <button type="submit">Войти</button>
-              <a href="">Забыли пароль?</a>
-              <a href="">Новая регистрация</a>
-            </form>
-          </li>
-          <li class="shopping-cart">
-            <h2 class="visually-hidden">Корзина с товарами</h2>
-            <a class="header-btn shopping-cart-link" href="">Пусто</a>
-          </li>
-        </ul>
-        <p class="header-work-hours">с 10 по 20, ежедневно</p>
-        <a href="tel:8-812-450-25-25" class="header-phone">8 812 450-25-25</a>
+        </div>
+        <div class="header-bottom">
+          <p class="header-work-hours">с 10 по 20, ежедневно</p>
+          <a href="tel:8-812-450-25-25" class="header-phone">8 812 450-25-25</a>
+        </div>
       </header>
       <main>
         <h1 class="visually-hidden">Магазин мороженного "Gllacy"</h1>
         <section class="main-visual">
-          <h2 class="main-visual-item">Крем-брюле и пломбир с малиновым джемом</h2>
-          <h2 class="main-visual-item visually-hidden">Шоколадный пломбир и лимонный сорбет</h2>
-          <h2 class="main-visual-item visually-hidden">Пломбир с помадкой и клубничый щербет</h2>
-          <a class="basic-button" href="catalog.html">Давайте оба!</a>
+          <h2 class="visually-hidden">Наши акции</h2>
+          <ul class="main-visual-slider">
+            <li class="slider-item  visually-hidden">
+              <h3>Крем-брюле и пломбир с малиновым джемом</h3>
+              <a class="basic-button" href="catalog.html">Давайте оба!</a>
+            </li>
+            <li class="slider-item visually-hidden">
+              <h3>Шоколадный пломбир и лимонный сорбет</h3>
+              <a class="basic-button" href="catalog.html">Давайте оба!</a>
+            </li>
+            <li class="slider-item ">
+              <h3>Пломбир с помадкой и клубничый щербет</h3>
+              <a class="basic-button" href="catalog.html">Давайте оба!</a>
+            </li>
+          </ul>
         </section>
-        <div class="col-fifty-fifty">
+        <div class="index-column">
           <section class="advantages advantages-raspberries">
             <h2>Малинка даром!</h2>
             <p>
