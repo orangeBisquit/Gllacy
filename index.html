@@ -259,18 +259,19 @@
         </section>
         <section class="subscription-form">
           <h2 class="visually-hidden">Форма подтверждения рассылки</h2>
-          <button type="button">
-            <span class="visually-hidden">Закрыть форму</span>
-          </button>
-          <form method="post" action="https://echo.htmlacademy.ru">
+
+          <form class="basic-form" method="post" action="https://echo.htmlacademy.ru">
+            <button type="button">
+              X<span class="visually-hidden">Закрыть форму</span>
+            </button>
             <h3>Мы обязательно вам ответим!</h3>
-            <input type="text" placeholder="Имя Фамилия" id="subscribe-name">
+            <input class="basic-input" type="text" placeholder="Имя Фамилия" id="subscribe-name">
             <label for="subscribe-name" class="visually-hidden">Имя Фамилия</label>
-            <input type="email" placeholder="email@example.com" id="subscribe-email">
+            <input class="basic-input" type="email" placeholder="email@example.com" id="subscribe-email">
             <label for="subscribe-email" class="visually-hidden">Электронная почта</label>
-            <textarea id="subscribe-message" placeholder="В свободной форме"></textarea>
+            <textarea class="basic-input" id="subscribe-message" placeholder="В свободной форме"></textarea>
             <label class="visually-hidden" for="subscribe-message">Ваше сообщение</label>
-            <button type="submit">Отправить</button>
+            <button class="basic-button" type="submit">Отправить</button>
           </form>
         </section>
       </main>

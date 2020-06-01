@@ -72,9 +72,13 @@
                 <label class="visually-hidden" for="login-email">Электронная почта</label>
                 <input type="password" name="login-password" id="login-password" placeholder="......">
                 <label class="visually-hidden" for="login-password">Пароль</label>
-                <button class="basic-button" type="submit">Войти</button>
-                <a href="">Забыли пароль?</a>
-                <a href="">Новая регистрация</a>
+                <div class="login-bottom-wrapper">
+                  <button class="basic-button" type="submit">Войти</button>
+                  <div class="login-links-wrapper">
+                    <a href="">Забыли пароль?</a>
+                    <a href="">Новая регистрация</a>
+                  </div>
+                </div>
               </form>
             </li>
             <li class="shopping-cart cart-full">
@@ -129,13 +133,13 @@
       <main>
         <div class="breadcrumbs">
           <ul class="no-bullets">
-            <li>
+            <li class="breadcrumbs-item">
               <a class="basic-link-light" href="index.html">Главная</a>
             </li>
-            <li>
+            <li class="breadcrumbs-item">
               <a class="basic-link-light">Каталог</a>
             </li>
-            <li>
+            <li class="breadcrumbs-item">
               <a class="basic-link-light">Сливочное</a>
             </li>
           </ul>
@@ -420,10 +424,14 @@
             <a class="basic-link-light" href="">Экологические стандарты</a></li>
         </ul>
         <div class="footer-copyright">
-          <a class="basic-link-light" href="https://htmlacademy.ru/intensive/htmlcss">
-            <img src="img/icons/logo-htmlacademy.svg" alt="Лого HTML Academy" width="108" height="39" />
-            <span>Сделано в HTML Academy &copy; 2019</span>
-          </a>
+          <img src="img/icons/logo-htmlacademy.svg" alt="Лого HTML Academy" width="108" height="39" />
+          <p>
+            Сделано в
+            <a class="basic-link-light" href="https://htmlacademy.ru/intensive/htmlcss">
+              <span>HTML Academy</span>
+            </a>
+            &copy; 2019
+          </p>
         </div>
       </footer>
     </div>
