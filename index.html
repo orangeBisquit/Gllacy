@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <div class="wrapper">
+  <div class="wrapper wrapper-one">
     <div class="container">
       <header class="header">
         <div class="header-top">
@@ -56,7 +56,7 @@
                 </svg>
               </a>
               <form class="search-form pop-up" method="get" action="https://echo.htmlacademy.ru">
-                <input type="search" name="search" id="search" placeholder="Крем-брюле" />
+                <input class="basic-input" type="search" name="search" id="search" placeholder="Крем-брюле" />
                 <label class="visually-hidden" for="search">Поиск</label>
               </form>
             </li>
@@ -68,9 +68,11 @@
                 <span>Вход</span>
               </a>
               <form class="login-form pop-up" method="post" action="https://echo.htmlacademy.ru">
-                <input type="email" name="login-email" id="login-email" placeholder="email@example.com">
+                <input class="basic-input" type="email" name="login-email" id="login-email"
+                  placeholder="email@example.com">
                 <label class="visually-hidden" for="login-email">Электронная почта</label>
-                <input type="password" name="login-password" id="login-password" placeholder="......">
+                <input class="basic-input" type="password" name="login-password" id="login-password"
+                  placeholder="......">
                 <label class="visually-hidden" for="login-password">Пароль</label>
                 <div class="login-bottom-wrapper">
                   <button class="basic-button" type="submit">Войти</button>
@@ -97,19 +99,24 @@
         <section class="main-visual">
           <h2 class="visually-hidden">Наши акции</h2>
           <ul class="main-visual-slider">
-            <li class="slider-item  visually-hidden">
+            <li class="slider-item">
               <h3>Крем-брюле и пломбир с малиновым джемом</h3>
               <a class="basic-button" href="catalog.html">Давайте оба!</a>
             </li>
-            <li class="slider-item visually-hidden">
+            <li class="slider-item">
               <h3>Шоколадный пломбир и лимонный сорбет</h3>
               <a class="basic-button" href="catalog.html">Давайте оба!</a>
             </li>
-            <li class="slider-item ">
+            <li class="slider-item slide-current">
               <h3>Пломбир с помадкой и клубничый щербет</h3>
               <a class="basic-button" href="catalog.html">Давайте оба!</a>
             </li>
           </ul>
+          <div class="slider-btns">
+            <button class="slider-btn-item" aria-label="Первый слайд"></button>
+            <button class="slider-btn-item" aria-label="Второй слайд"></button>
+            <button class="slider-btn-item slider-btn-active" aria-label="Третий слайд"></button>
+          </div>
         </section>
         <div class="index-column advantages-row">
           <section class="advantages advantages-raspberries">
@@ -262,7 +269,7 @@
 
           <form class="basic-form" method="post" action="https://echo.htmlacademy.ru">
             <button type="button">
-              X<span class="visually-hidden">Закрыть форму</span>
+              <span class="visually-hidden">Закрыть форму</span>
             </button>
             <h3>Мы обязательно вам ответим!</h3>
             <input class="basic-input" type="text" placeholder="Имя Фамилия" id="subscribe-name">

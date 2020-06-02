@@ -9,6 +9,7 @@
   --nav-btn-active-shadow: #696969;
   --submenu-hover: #fbded7;
   --submenu-active: #f6b5a5;
+  --transparent-full: transparent;
   --transparent-light: rgba(255, 255, 255, 0.2);
   --transparent-hard: rgba(255, 255, 255, 0.8);
   --transparent-half: rgba(49, 50, 53, 0.5);
@@ -23,6 +24,7 @@
   --btn-shadow: rgba(85, 8, 0, 0.54);
   --btn-hover-shadow: #ac1000;
   --btn-active-shadow: #942718;
+  --btn-text-shadow: rgba(160, 32, 11, 0.76);
   --subscribe-bg: #f8f7f4;
   --icon-border: rgba(255, 255, 255, 0.5);
   --icon-border-hover: rgba(255, 255, 255, 0.7);
@@ -54,7 +56,24 @@ img {
 
 .wrapper {
   min-width: 1200px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  min-height: 100vh;
+}
+
+.wrapper-one {
   background-color: var(--bg-wrapper-one);
+  background-image: url("../img/main-slide-1.png");
+}
+
+.wrapper-two {
+  background-color: var(--bg-wrapper-two);
+  background-image: url("../img/main-slide-2.png");
+}
+
+.wrapper-three {
+  background-color: var(--bg-wrapper-three);
+  background-image: url("../img/main-slide-3.png");
 }
 
 .container {
@@ -106,6 +125,7 @@ ul.no-bullets {
   font-size: 18px;
   line-height: 24px;
   color: var(--main-color);
+  text-shadow: var(--btn-text-shadow);
   font-weight: 700;
 }
 .basic-button:hover {
@@ -129,14 +149,15 @@ ul.no-bullets {
   border-radius: 4px;
 }
 .basic-input {
+  outline: none;
   border: 1px solid var(--input-border);
   border-radius: 4px;
 }
 
-.basic-input input:hover {
+.basic-input:hover {
   border: 2px solid rgba(178, 178, 178, 0.52);
 }
-.basic-input input:focus {
+.basic-input:focus {
   outline: none;
   border: 2px solid var(--input-border-focus);
 }
@@ -166,14 +187,17 @@ ul.no-bullets {
 }
 
 /* || HEADER */
+.header {
+  outline: 2px dashed rgba(0, 255, 0, 0.3); /* DELETE */
+}
 .header-logo {
-  margin-right: 10px;
-  margin-top: 9px;
+  margin-right: 11px;
 }
 /* \ main-nav */
 .header-top {
+  margin-top: 9px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .header nav {
@@ -183,10 +207,11 @@ ul.no-bullets {
 .main-nav {
   display: flex;
   margin: 0;
-  margin-top: 23px;
+  margin-top: 11px;
 }
 
 .main-nav-item {
+  margin-right: 7px;
   padding-bottom: 5px;
 }
 
@@ -263,7 +288,7 @@ ul.no-bullets {
 .header-btns {
   display: flex;
   margin: 0;
-  margin-top: 23px;
+  margin-top: 16px;
 }
 
 .header-btns li:not(:last-child) {
@@ -299,6 +324,7 @@ ul.no-bullets {
   width: 32px;
   height: 32px;
 }
+
 /* \\ login */
 .login-link {
   width: 92px;
@@ -310,6 +336,11 @@ ul.no-bullets {
   padding-left: 8px;
   padding-top: 2px;
 }
+.login .icon {
+  position: relative;
+  top: -2px;
+}
+
 /* \\shopping-cart */
 .shopping-cart {
   width: 100px;
@@ -350,22 +381,18 @@ ul.no-bullets {
 .search-form input,
 .login-form input {
   padding: 15px;
-  border: 1px solid var(--input-border);
   border-radius: 4px;
 }
 
 .search-form input:hover,
 .login-form input:hover {
   padding: 14px 15px;
-  border: 2px solid rgba(178, 178, 178, 0.52);
 }
 .search-form input:focus,
 .login-form input:focus {
   line-height: 22px;
   font-weight: 700;
-  outline: none;
-  padding: 14px 15px;
-  border: 2px solid var(--input-border-focus);
+  padding: 12px 15px;
 }
 /* \\\ search pop-up */
 .search-form {
@@ -422,23 +449,30 @@ ul.no-bullets {
 /* \ header-btn-items-pop-ups */
 /* || Slider */
 .main-visual {
+  position: relative;
   margin-bottom: 40px;
-  margin-top: 275px;
+  padding-top: 275px;
 }
 
-.main-visual ul {
+.main-visual-slider {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 .slider-item {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
+
+.slider-item.slide-current {
+  display: block;
+}
+
 .slider-item h3 {
   max-width: 680px;
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 16px;
   font-size: 60px;
   line-height: 70px;
@@ -451,6 +485,28 @@ ul.no-bullets {
   line-height: 44px;
   padding: 9px 40px 10px;
 }
+
+.slider-btns {
+  width: 79px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 16px;
+}
+
+.slider-btn-item {
+  width: 19px;
+  height: 19px;
+  background-color: var(--transparent-full);
+  border: 2px solid var(--main-color);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-btn-active {
+  background-color: var(--main-color);
+}
+
 /* || Advantages sections */
 .advantages-row {
   margin-bottom: 40px;
@@ -513,7 +569,7 @@ ul.no-bullets {
   width: 267px;
   min-height: 320px;
 }
-м .item-img-box {
+.item-img-box {
   display: block;
   width: 267px;
   height: 267px;
@@ -685,6 +741,7 @@ ul.no-bullets {
 }
 /* \ subscription form */
 .subscription-form {
+  display: block;
   margin: 100px 0;
   outline: none;
 }
@@ -700,7 +757,6 @@ ul.no-bullets {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  outline: 1px solid red; /* DELETE */
   background-color: var(--subscribe-bg);
 }
 .subscription-form h3 {
@@ -712,18 +768,54 @@ ul.no-bullets {
 .subscription-form input[type="text"],
 .subscription-form input[type="email"] {
   padding: 15px;
-  border: 1px solid var(--input-border);
   min-width: 267px;
 }
 
+.subscription-form input[type="text"]:focus,
+.subscription-form input[type="email"]:focus {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
 .subscription-form textarea {
+  padding: 15px;
   min-width: 428px;
   min-height: 154px;
 }
 .subscription-form button[type="button"] {
+  width: 23px;
+  height: 23px;
+  align-self: flex-end;
+  position: relative;
+  background-color: var(--transparent-full);
+  border: none;
+  cursor: pointer;
+}
+
+.subscription-form button[type="button"] {
+  outline-color: var(--input-border-focus);
+}
+.subscription-form button[type="button"]::before {
+  content: "";
+  display: block;
+  width: 3px;
+  height: 22px;
   position: absolute;
   top: 0;
-  right: 0;
+  left: 10px;
+  background-color: var(--main-color-dark);
+  transform: rotate(45deg);
+}
+.subscription-form button[type="button"]::after {
+  content: "";
+  display: block;
+  width: 3px;
+  height: 22px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  background-color: var(--main-color-dark);
+  transform: rotate(-45deg);
 }
 .subscription-form button[type="submit"] {
   align-self: flex-end;
@@ -769,11 +861,6 @@ ul.no-bullets {
   font-weight: 700;
   color: inherit;
   text-decoration: none;
-}
-
-/* || SUBSCRIPTION FORM */
-.subscription-form {
-  display: none;
 }
 
 /* || FOOTER */
