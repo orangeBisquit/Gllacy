@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <div class="wrapper">
+  <div class="wrapper-catalog">
     <div class="container">
       <header class="header">
         <div class="header-top">
@@ -151,58 +151,67 @@
           <form method="get" action="https://echo.htmlacademy.ru">
             <fieldset class="filters-sort">
               <legend>Сортировка:</legend>
-              <select>
-                <option value="popularity">по популярности</option>
-                <option value="cheap">сначала недорогие</option>
-                <option value="expensive">сначала дорогие</option>
-                <option value="fat-amount">по жирности</option>
-              </select>
+              <div class="filter-wrapper">
+                <select class="filters-sort-item">
+                  <option value="popularity">по популярности</option>
+                  <option value="cheap">сначала недорогие</option>
+                  <option value="expensive">сначала дорогие</option>
+                  <option value="fat-amount">по жирности</option>
+                </select>
+                <svg width="11" height="10">
+                  <use xlink:href="img/icons/sprite-mine.svg#icon-down-dir"></use>
+                </svg>
+              </div>
             </fieldset>
             <fieldset class="filters-price">
               <legend>Цена: 100 &#8381; - 500 &#8381;</legend>
-              <!-- smth -->
+              <div class="filters-price-slider">
+
+              </div>
             </fieldset>
             <fieldset class="filters-fat">
               <legend>Жирность:</legend>
-              <p>
-                <input type="radio" id="zero" name="fat-count" value="fat-zero">
-                <label for="zero">0%</label>
-              </p>
-              <p>
-                <input type="radio" id="ten" name="fat-count" value="fat-ten">
-                <label for="ten">до 10%</label>
-              </p>
-              <p>
-                <input type="radio" id="thirty-less" name="fat-count" value="fat-thirty-less">
-                <label for="thirty-less">до 30%</label>
-              </p>
-              <p>
-                <input type="radio" id="thirty-more" name="fat-count" value="fat-thirty-more">
-                <label for="thirty-more">выше 30%</label>
-              </p>
+              <div class="filter-wrapper">
+                <p>
+                  <input type="radio" id="zero" name="fat-count" value="fat-zero">
+                  <label for="zero">0%</label>
+                </p>
+                <p>
+                  <input type="radio" id="ten" name="fat-count" value="fat-ten">
+                  <label for="ten">до 10%</label>
+                </p>
+                <p>
+                  <input type="radio" id="thirty-less" name="fat-count" value="fat-thirty-less">
+                  <label for="thirty-less">до 30%</label>
+                </p>
+                <p>
+                  <input type="radio" id="thirty-more" name="fat-count" value="fat-thirty-more">
+                  <label for="thirty-more">выше 30%</label>
+                </p>
+              </div>
             </fieldset>
             <fieldset class="filters-addons">
               <legend>Наполнители</legend>
-              <p>
-                <input type="checkbox" id="chocolate" value="add-chocolate">
-                <label for="chocolate">шоколадные</label></p>
-              <p>
-                <input type="checkbox" id="sugar" value="add-sugar">
-                <label for="sugar">сахарные присыпки</label></p>
-              <p>
-                <input type="checkbox" id="fruits" value="add-fruits">
-                <label for="fruits">фрукты</label></p>
-              <p>
-                <input type="checkbox" id="syrops" value="add-syrops">
-                <label for="syrops">сиропы</label></p>
-              <p>
-                <input type="checkbox" id="jam" value="add-jam">
-                <label for="jam">джемы</label></p>
+              <div class="filter-wrapper">
+                <p>
+                  <input type="checkbox" id="chocolate" value="add-chocolate">
+                  <label for="chocolate">шоколадные</label></p>
+                <p>
+                  <input type="checkbox" id="sugar" value="add-sugar">
+                  <label for="sugar">сахарные присыпки</label></p>
+                <p>
+                  <input type="checkbox" id="fruits" value="add-fruits">
+                  <label for="fruits">фрукты</label></p>
+                <p>
+                  <input type="checkbox" id="syrops" value="add-syrops">
+                  <label for="syrops">сиропы</label></p>
+                <p>
+                  <input type="checkbox" id="jam" value="add-jam">
+                  <label for="jam">джемы</label></p>
+              </div>
             </fieldset>
             <button type="submit">Применить</button>
           </form>
-
-
         </section>
         <section class="assortment">
           <h2 class="visually-hidden">Ассортимент</h2>
@@ -382,7 +391,7 @@
           <li class="social-icons-item">
             <a href="">
               <span class="visually-hidden">Наш Фейсбук</span>
-              <svg class="icon" width="32" height="32">
+              <svg class="icon" width="36" height="36">
                 <use xlink:href="img/icons/social-sprite.svg#fb"></use>
               </svg>
             </a>
@@ -390,7 +399,7 @@
           <li class="social-icons-item">
             <a href="">
               <span class="visually-hidden">Мы Вконтакте</span>
-              <svg class="icon" width="32" height="32">
+              <svg class="icon" width="36" height="36">
                 <use xlink:href="img/icons/social-sprite.svg#vk"></use>
               </svg>
             </a>
@@ -398,7 +407,7 @@
           <li class="social-icons-item">
             <a href="">
               <span class="visually-hidden">Наш Инстаграм</span>
-              <svg class="icon" width="32" height="32">
+              <svg class="icon" width="36" height="36">
                 <use xlink:href="img/icons/social-sprite.svg#instagram"></use>
               </svg>
             </a>
@@ -406,7 +415,7 @@
           <li class="social-icons-item">
             <a href="">
               <span class="visually-hidden">Мы в Твиттере</span>
-              <svg class="icon" width="32" height="32">
+              <svg class="icon" width="36" height="36">
                 <use xlink:href="img/icons/social-sprite.svg#twitter"></use>
               </svg>
             </a>

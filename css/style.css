@@ -50,11 +50,16 @@ body {
 }
 
 img {
-  /* width: 100%;  Не работает */
+  width: 100%;
   height: auto;
 }
 
-.wrapper {
+.wrapper-catalog {
+  min-width: 1200px;
+  background-color: var(--bg-wrapper-three);
+}
+
+.wrapper-main {
   min-width: 1200px;
   background-repeat: no-repeat;
   background-position: top center;
@@ -195,9 +200,9 @@ ul.no-bullets {
 }
 /* \ main-nav */
 .header-top {
-  margin-top: 9px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .header nav {
@@ -288,7 +293,6 @@ ul.no-bullets {
 .header-btns {
   display: flex;
   margin: 0;
-  margin-top: 16px;
 }
 
 .header-btns li:not(:last-child) {
@@ -1004,12 +1008,58 @@ ul.no-bullets {
 }
 
 /* FILTERS */
+
+.filters form {
+  display: flex;
+  flex-wrap: wrap;
+}
+.filters fieldset {
+  border: 0;
+  margin-right: 15px;
+  outline: 2px dashed rgba(255, 0, 0, 0.3);
+}
 .filters h2 {
   font-size: 35px;
   line-height: 41px;
   font-weight: 700;
   margin: 0;
 }
+
+/* \ Sort */
+.filters-sort .filter-wrapper {
+  position: relative;
+  width: 196px;
+  min-height: 36px;
+}
+
+.filters-sort svg {
+  position: absolute;
+  fill: var(--main-color);
+  top: 13px;
+  right: 14px;
+}
+
+.filters-sort-item {
+  width: 196px;
+  min-height: 36px;
+  padding-left: 16px;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--transparent-light);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: var(--main-color);
+}
+
+.filters-sort-item:hover ~ svg {
+  fill: var(--main-color-dark);
+}
+.filters-sort-item:hover,
+.filters-sort option {
+  color: var(--main-color-dark);
+}
+
 /* \ page-nav */
 .page-number {
   display: flex;
