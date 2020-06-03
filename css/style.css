@@ -82,6 +82,7 @@ img {
 }
 
 .container {
+  outline: 2px dashed peachpuff;
   width: 1146px;
   margin: 0 auto;
 }
@@ -116,6 +117,7 @@ ul.no-bullets {
 
 .basic-button {
   display: inline-block;
+  vertical-align: middle;
   border: none;
   padding: 12px 22px 12px;
   background: linear-gradient(
@@ -154,17 +156,21 @@ ul.no-bullets {
   border-radius: 4px;
 }
 .basic-input {
-  outline: none;
+  min-height: 44px;
+  padding-left: 14px;
   border: 1px solid var(--input-border);
   border-radius: 4px;
+  outline: none;
 }
 
 .basic-input:hover {
+  padding-left: 13px;
   border: 2px solid rgba(178, 178, 178, 0.52);
 }
 .basic-input:focus {
-  outline: none;
+  padding-left: 13px;
   border: 2px solid var(--input-border-focus);
+  outline: none;
 }
 
 .pop-up-trigger {
@@ -198,21 +204,21 @@ ul.no-bullets {
 .header-logo {
   margin-right: 11px;
 }
-/* \ main-nav */
 .header-top {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
-
+/* \ main-nav */
 .header nav {
   margin-right: auto;
 }
 
 .main-nav {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
-  margin-top: 11px;
+  align-items: center;
 }
 
 .main-nav-item {
@@ -222,6 +228,7 @@ ul.no-bullets {
 
 .main-nav-item > a {
   display: inline-block;
+  vertical-align: middle;
   padding: 9px 13px;
   line-height: 18px;
   font-weight: 700;
@@ -291,7 +298,10 @@ ul.no-bullets {
 
 /* \ header-btns */
 .header-btns {
+  min-width: 244px;
+  min-height: 36px; /* чтобы попапы при ховере не пропадали из-за пустого места между кнопками и попапом */
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
 }
 
@@ -309,7 +319,6 @@ ul.no-bullets {
   text-decoration: none;
   color: var(--main-color);
   border-radius: 30px;
-  margin-bottom: 10px; /* DELETE */
 }
 
 .header-btn-item:first-child {
@@ -331,23 +340,20 @@ ul.no-bullets {
 
 /* \\ login */
 .login-link {
-  width: 92px;
+  position: relative;
+  min-width: 92px;
   height: 32px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
-.login-link span {
-  padding-left: 8px;
-  padding-top: 2px;
-}
+
 .login .icon {
-  position: relative;
-  top: -2px;
+  transform: translateY(-2px);
 }
 
 /* \\shopping-cart */
 .shopping-cart {
-  width: 100px;
+  min-width: 100px;
   height: 32px;
   position: relative;
 }
@@ -384,19 +390,18 @@ ul.no-bullets {
 }
 .search-form input,
 .login-form input {
-  padding: 15px;
+  box-sizing: border-box;
   border-radius: 4px;
 }
 
-.search-form input:hover,
-.login-form input:hover {
-  padding: 14px 15px;
-}
 .search-form input:focus,
 .login-form input:focus {
   line-height: 22px;
   font-weight: 700;
-  padding: 12px 15px;
+}
+.search-form input:focus::placeholder,
+.login-form input:focus::placeholder {
+  font-weight: 400;
 }
 /* \\\ search pop-up */
 .search-form {
@@ -708,6 +713,7 @@ ul.no-bullets {
 
 .types-of-serving a {
   display: inline-block;
+  vertical-align: middle;
   max-width: 287px;
   font-size: 24px;
   line-height: 30px;
@@ -730,11 +736,18 @@ ul.no-bullets {
   padding: 5px;
 }
 .subscribe-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items:
   width: 548px;
   height: 210px;
   background-color: var(--subscribe-bg);
   border-radius: 16px;
-  padding: 16px;
+  padding-top: 29px;
+  padding-left: 20px;
+  padding-right: 16px;
+  padding-bottom: 35px;
 }
 
 .subscribe p {
@@ -743,9 +756,19 @@ ul.no-bullets {
   line-height: 22px;
   color: var(--subscribe-letter);
 }
+
+.send-form input {
+  min-width: 368px;
+  padding-left: 14px;
+  margin-right: 5px;
+}
+
+.send-form button {
+  padding: 14px 19px 13px;
+}
 /* \ subscription form */
 .subscription-form {
-  display: block;
+  display: block; /* DELETE */
   margin: 100px 0;
   outline: none;
 }
@@ -771,20 +794,19 @@ ul.no-bullets {
 }
 .subscription-form input[type="text"],
 .subscription-form input[type="email"] {
-  padding: 15px;
   min-width: 267px;
-}
-
-.subscription-form input[type="text"]:focus,
-.subscription-form input[type="email"]:focus {
-  padding-top: 14px;
-  padding-bottom: 14px;
 }
 
 .subscription-form textarea {
   padding: 15px;
   min-width: 428px;
   min-height: 154px;
+}
+
+.subscription-form textarea:hover,
+.subscription-form textarea:focus {
+  padding-top: 14px;
+  padding-left: 14px;
 }
 .subscription-form button[type="button"] {
   width: 23px;
@@ -947,6 +969,10 @@ ul.no-bullets {
 }
 
 /* \\ copyright */
+.footer-copyright img {
+  width: 108px;
+  height: 39px;
+}
 .footer-copyright p {
   margin: 0;
   font-size: 12px;
@@ -956,10 +982,6 @@ ul.no-bullets {
 .footer-copyright a {
   font-size: 12px;
   line-height: 18px;
-}
-
-.footer-copyright p {
-  margin: 0;
 }
 
 /* ---- || CATALOG || ----- */
@@ -975,8 +997,10 @@ ul.no-bullets {
   background-color: var(--current-page-bg);
 }
 /* HEADER BTNS */
-.shopping-cart.cart-full {
-  width: 118px;
+.cart-full .shopping-cart-link {
+  min-width: 118px;
+  background-color: var(--main-color);
+  color: var(--main-color-dark);
 }
 
 .shopping-cart.cart-full::before {
@@ -1076,6 +1100,7 @@ ul.no-bullets {
 
 .pages-nav-item a {
   display: inline-block;
+  vertical-align: middle;
   min-width: 18px;
   min-height: 18px;
   padding: 4px;
