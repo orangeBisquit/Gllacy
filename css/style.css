@@ -82,7 +82,7 @@ img {
 }
 
 .container {
-  /* outline: 2px dashed peachpuff; DELETE */
+  outline: 2px dashed peachpuff; 
   width: 1146px;
   margin: 0 auto;
 }
@@ -95,7 +95,7 @@ body {
 .index-column {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 20px;
+  column-gap: 26px;
 }
 
 /* || UTILITIES */
@@ -132,7 +132,7 @@ ul.no-bullets {
   font-size: 18px;
   line-height: 24px;
   color: var(--main-color);
-  text-shadow: var(--btn-text-shadow);
+  text-shadow: 0px 2px 5px var(--btn-text-shadow);
   font-weight: 700;
 }
 .basic-button:hover {
@@ -162,7 +162,6 @@ ul.no-bullets {
   border-radius: 4px;
   outline: none;
 }
-
 .basic-input:hover {
   padding-left: 13px;
   border: 2px solid rgba(178, 178, 178, 0.52);
@@ -223,7 +222,7 @@ ul.no-bullets {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
-  margin-top: 10px;
+  margin-top: 11px;
 }
 
 .main-nav-item {
@@ -239,7 +238,8 @@ ul.no-bullets {
   font-weight: 700;
 }
 
-.main-nav-item > a:hover {
+.main-nav-item > a:hover,
+.main-nav-item > a:focus {
   background-color: var(--main-color);
   color: var(--main-color-dark);
   border-radius: 26px;
@@ -308,7 +308,7 @@ ul.no-bullets {
   min-width: 244px;
   min-height: 36px; /* чтобы попапы при ховере не пропадали из-за пустого места между кнопками и попапом */
   margin: 0;
-  margin-top: 13px;
+  margin-top: 14px;
 }
 
 .header-btns li:not(:last-child) {
@@ -353,7 +353,7 @@ ul.no-bullets {
   justify-content: space-around;
 }
 .login-link span {
-  transform: translate(-2px, 2px)
+  transform: translate(-2px, 1px)
 }
 .login-link .icon {
   transform: translate(3px, -2px);
@@ -378,6 +378,13 @@ ul.no-bullets {
 .shopping-cart a {
   padding-left: 45px;
 }
+
+.shopping-cart span {
+  display: block;
+  position: relative;
+  top: 1px;
+}
+
 /* \\\ empty-cart */
 .header-btn-item:hover:not(.shopping-cart-link) {
   color: var(--main-color-dark);
@@ -468,7 +475,7 @@ ul.no-bullets {
 .main-visual {
   position: relative;
   margin-bottom: 40px;
-  padding-top: 275px;
+  padding-top: 273px;
 }
 
 .main-visual-slider {
@@ -490,7 +497,7 @@ ul.no-bullets {
 .slider-item h3 {
   max-width: 680px;
   margin: 0 auto;
-  margin-bottom: 16px;
+  margin-bottom: 6px;
   font-size: 60px;
   line-height: 70px;
   font-weight: 700;
@@ -508,12 +515,12 @@ ul.no-bullets {
   display: flex;
   justify-content: space-between;
   position: absolute;
-  bottom: 16px;
+  bottom: 24px;
 }
 
 .slider-btn-item {
-  width: 19px;
-  height: 19px;
+  width: 20px;
+  height: 20px;
   background-color: var(--transparent-full);
   border: 2px solid var(--main-color);
   border-radius: 50%;
@@ -540,7 +547,7 @@ ul.no-bullets {
 
 .advantages h2 {
   margin: 0;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
   font-size: 35px;
   line-height: 41px;
   font-weight: 700;
@@ -570,7 +577,7 @@ ul.no-bullets {
 }
 /* || PRODUCT CARDS */
 .assortment {
-  margin-bottom: 46px;
+  margin-bottom: 39px;
 }
 .assortment ul {
   margin: 0;
@@ -590,11 +597,15 @@ ul.no-bullets {
   display: block;
   width: 267px;
   height: 267px;
+  border-radius: 50%;
   margin-bottom: 13px;
+  overflow: hidden; /* белые края */
 }
 
 .assortment-item img {
   border-radius: 50%;
+  width: 268px; 
+  height: 268px;
   background-color: var(--main-color-dark);
 }
 
@@ -610,7 +621,7 @@ ul.no-bullets {
 
 .assortment-price {
   position: absolute;
-  top: 216px;
+  top: 208px;
   left: 0;
   margin: 0;
   font-size: 45px;
@@ -645,7 +656,7 @@ ul.no-bullets {
   background-color: var(--submenu-hover);
   background: url("../img/bg/waffle-bg.jpg") repeat;
   color: var(--main-color-dark);
-  padding: 24px 23px 36px 20px;
+  padding: 24px 23px 30px 20px;
   margin-bottom: 40px; /* DELETE! */
 }
 
@@ -653,13 +664,13 @@ ul.no-bullets {
   margin: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 26px;
-  row-gap: 33px;
+  column-gap: 31px;
+  row-gap: 22px;
 }
 
 .about-us-heading {
   margin: 0;
-  margin-bottom: 27px;
+  margin-bottom: 16px;
   font-size: 24px;
   line-height: 30px;
   font-weight: 500;
@@ -680,8 +691,8 @@ ul.no-bullets {
   content: "";
   width: 49px;
   height: 49px;
-  top: -10px;
-  left: -5px;
+  top: -9px;
+  left: -1px;
 }
 
 .about-us-item:nth-child(1)::before {
@@ -704,7 +715,7 @@ ul.no-bullets {
 .types-of-serving {
   width: 560px;
   height: 220px;
-  padding: 23px 20px;
+  padding: 18px 20px;
   border-radius: 16px;
   background-color: var(--main-color);
   background: url("../img/bg/strawberry-bg.jpg");
@@ -712,11 +723,11 @@ ul.no-bullets {
 
 .types-of-serving h3 {
   margin: 0;
+  margin-bottom: 2px;
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
   color: var(--main-color-dark);
-  margin-bottom: 15px;
 }
 
 .types-of-serving a {
