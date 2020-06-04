@@ -82,7 +82,7 @@ img {
 }
 
 .container {
-  outline: 2px dashed peachpuff;
+  /* outline: 2px dashed peachpuff; DELETE */
   width: 1146px;
   margin: 0 auto;
 }
@@ -199,26 +199,31 @@ ul.no-bullets {
 
 /* || HEADER */
 .header {
-  outline: 2px dashed rgba(0, 255, 0, 0.3); /* DELETE */
+  /* outline: 2px dashed rgba(0, 255, 0, 0.3);  */
 }
 .header-logo {
+  width: 154px;
+  height: 64px;
   margin-right: 11px;
 }
 .header-top {
   display: flex;
+  min-height: 67px;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  margin-top: 9px;
 }
 /* \ main-nav */
 .header nav {
   margin-right: auto;
+  
 }
 
 .main-nav {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
-  align-items: center;
+  margin-top: 10px;
 }
 
 .main-nav-item {
@@ -298,11 +303,12 @@ ul.no-bullets {
 
 /* \ header-btns */
 .header-btns {
-  min-width: 244px;
-  min-height: 36px; /* чтобы попапы при ховере не пропадали из-за пустого места между кнопками и попапом */
   display: flex;
   flex-wrap: wrap;
+  min-width: 244px;
+  min-height: 36px; /* чтобы попапы при ховере не пропадали из-за пустого места между кнопками и попапом */
   margin: 0;
+  margin-top: 13px;
 }
 
 .header-btns li:not(:last-child) {
@@ -346,9 +352,11 @@ ul.no-bullets {
   display: flex;
   justify-content: space-around;
 }
-
-.login .icon {
-  transform: translateY(-2px);
+.login-link span {
+  transform: translate(-2px, 2px)
+}
+.login-link .icon {
+  transform: translate(3px, -2px);
 }
 
 /* \\shopping-cart */
@@ -364,11 +372,11 @@ ul.no-bullets {
   width: 21px;
   height: 20px;
   background: url("../img/icons/basket.svg");
-  top: 5px;
-  left: 15px;
+  top: 6px;
+  left: 16px;
 }
 .shopping-cart a {
-  padding-left: 44px;
+  padding-left: 45px;
 }
 /* \\\ empty-cart */
 .header-btn-item:hover:not(.shopping-cart-link) {
