@@ -1166,9 +1166,8 @@ tr:last-child .cart-item-title {
 }
 
 /* FILTERS */
-
 .filters form {
-  width: 900px;
+  width: 905px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -1176,7 +1175,7 @@ tr:last-child .cart-item-title {
   border: 0;
   padding: 0;
   margin-right: 15px;
-  outline: 2px dashed rgba(255, 0, 0, 0.3);
+  outline: 2px dashed rgba(255, 0, 0, 0.3); /* DELETE */
 }
 .filters h2 {
   font-size: 35px;
@@ -1184,12 +1183,19 @@ tr:last-child .cart-item-title {
   font-weight: 700;
   margin: 0;
 }
+.filters .filter-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 36px;
+  background-color: var(--transparent-light);
+  border-radius: 20px;
+}
 
 /* \ Sort */
 .filters-sort .filter-wrapper {
   position: relative;
   width: 196px;
-  min-height: 36px;
 }
 
 .filters-sort svg {
@@ -1253,28 +1259,36 @@ tr:last-child .cart-item-title {
 }
 /* fat amount */
 .filters-fat .filter-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 425px;
-  height: 36px;
+  width: 439px;
   padding-left: 47px;
   padding-right: 17px;
-  border-radius: 20px;
-  background-color: var(--transparent-light);
+  
+  
 }
 .filters-fat .fat-item {
   position: relative;
   margin-right: 10px; /* DELETE */
+  outline: 2px dashed red; /* DELETE */
 }
 
-.fat-item {
-  cursor: pointer;
-  outline: 2px dashed red;
+.fat-item label {
+  outline: 1px solid yellow;
+  padding-left: 33px;
 }
+
 .fat-item input {
   display: none;
 }
+/*  */
+.filter-input {
+  position: absolute;
+  top: 0;
+  fill: var(--transparent-hard)
+}
+.fat-item:hover .filter-input {
+  fill: var(--main-color)
+}
+/*  */
 
 .fat-item input:checked ~ .radio-on {
   display: block;
@@ -1284,13 +1298,22 @@ tr:last-child .cart-item-title {
   display: none;
 }
 
-.fat-item input ~ .radio-on {
+.fat-item input:not(:checked) ~ .radio-on {
   display: none;
 }
 
-.fat-item input ~ .radio-off {
+.fat-item input:not(:checked) ~ .radio-off {
   display: block;
 }
+/* \\ addons */
+.filters-addons .filter-wrapper {
+  width: 720px;
+  padding-left: 47px;
+  padding-right: 17px;
+}
+
+
+
 
 
 /* \ page-nav */
