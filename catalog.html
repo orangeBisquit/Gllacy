@@ -62,7 +62,7 @@
             </li>
             <li class="login pop-up-trigger">
               <a class="header-btn-item login-link" href="">
-                <svg class="icon" width="16" height="16">
+                <svg class="icon" width="20" height="20">
                   <use xlink:href="img/icons/btns-sprite.svg#entrance"></use>
                 </svg>
                 <span>Вход</span>
@@ -88,42 +88,42 @@
               <a class="header-btn-item shopping-cart-link" href="">2 товара</a>
               <div class="pop-up">
                 <table>
-                  <tr>
+                  <tr class="cart-full-item cart-row">
                     <td class="cart-delete-item">
                       <button type="button" class="delete-cart-item">
                         <span class="visually-hidden">Удалить товар</span>
                       </button>
                     </td>
-                    <td class="cart-image">
-                      <a href="#">
-                        <img src="img/ice-cream-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
-                      </a>
+                    <td class="cart-image cart-row">
+                      <img src="img/ice-cream-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
                     </td>
-                    <td class="cart-item-title">Пломбир с апельсиновым джемом</td>
-                    <td class="cart-amount"><span>1,5 кг</span> х <span>200 руб.</>
+                    <td class="cart-item-title cart-row">Пломбир с апельсиновым джемом</td>
+                    <td class="cart-amount cart-row">
+                      <span>1,5 кг х</span>
+                      <span class="price-gray">200 руб.</span>
                     </td>
-                    <td>300 руб.</td>
+                    <td class="cart-row">300 руб.</td>
                   </tr>
-                  <tr>
-                    <td class="cart-delete-item">
+                  <tr class="cart-full-item">
+                    <td class="cart-delete-item cart-row">
                       <button type="button" class="delete-cart-item">
                         <span class="visually-hidden">Удалить товар</span>
                       </button>
                     </td>
-                    <td class="cart-image">
-                      <a href="#">
-                        <img src="img/ice-cream-3.jpg" width="33" height="33"
-                          alt="Клубничный пломбир с присыпкой из белого шоколада">
-                      </a>
+                    <td class="cart-image cart-row">
+                      <img src="img/ice-cream-3.jpg" width="33" height="33"
+                        alt="Клубничный пломбир с присыпкой из белого шоколада">
                     </td>
-                    <td class="cart-item-title">Клубничный пломбир с присыпкой из белого шоколада</td>
-                    <td class="cart-amount"><span>1,5 кг</span> х <span>300 руб.</>
+                    <td class="cart-item-title cart-row">Клубничный пломбир с присыпкой из белого шоколада</td>
+                    <td class="cart-amount cart-row">
+                      <span>1,5 кг х</span>
+                      <span class="price-gray">300 руб.</span>
                     </td>
-                    <td>450 руб.</td>
+                    <td class="cart-row">450 руб.</td>
                   </tr>
                 </table>
                 <div class="cart-bottom-wrapper">
-                  <span class="price-total">Итого:750 руб.</span>
+                  <span class="price-total">Итого: 750 руб.</span>
                   <button type="button" class="basic-button order-btn">Оформить заказ</button>
                 </div>
               </div>
@@ -169,29 +169,61 @@
             </fieldset>
             <fieldset class="filters-price">
               <legend>Цена: 100 &#8381; - 500 &#8381;</legend>
-              <div class="filters-price-slider">
-
+              <div class="visually-hidden">
+                <label for="min-price">Цена от:</label>
+                <input type="number" name="min-price" id="min-price" value="100" tab-index="-1">
+                <label for="max-price">Цена до:</label>
+                <input type="number" name="max-price" id="max-price" value="500" tab-index="-1">
+              </div>
+              <div class="price-slider">
+                <div class="slider-bar"></div>
+                <div class="slider-range-min slider-range" tabindex="0"></div>
+                <div class="slider-range-max slider-range" tabindex="0"></div>
               </div>
             </fieldset>
             <fieldset class="filters-fat">
               <legend>Жирность:</legend>
               <div class="filter-wrapper">
-                <p>
-                  <input type="radio" id="zero" name="fat-count" value="fat-zero">
+                <p class="fat-item">
+                  <input class="visually-hidden" type="radio" id="zero" name="fat-count" value="fat-zero">
                   <label for="zero">0%</label>
+                  <svg class="radio-off" width="16" height="16">
+                    <use xlink:href="img/icons/radio-checkbox-sprite.svg#radio-off"></use>
+                  </svg>
+                  <svg class="radio-on" width="16" height="16">
+                    <use xlink:href="img/icons/radio-checkbox-sprite.svg#radio-on"></use>
+                  </svg>
                 </p>
-                <p>
-                  <input type="radio" id="ten" name="fat-count" value="fat-ten">
+                <p class="fat-item">
+                  <input class="visually-hidden" type="radio" id="ten" name="fat-count" value="fat-ten">
                   <label for="ten">до 10%</label>
+                  <svg class="radio-off" width="16" height="16">
+                    <use xlink:href="img/icons/radio-checkbox-sprite.svg#radio-off"></use>
+                  </svg>
+                  <svg class="radio-on" width="16" height="16">
+                    <use xlink:href="img/icons/radio-checkbox-sprite.svg#radio-on"></use>
+                  </svg>
                 </p>
-                <p>
-                  <input type="radio" id="thirty-less" name="fat-count" value="fat-thirty-less">
+                <!-- <p class="fat-item">
+                  <svg class="icon" width="16" height="16">
+                    <use xlink:href="img/icons/radio-checkbox-sprite.svg#radio-off"></use>
+                  </svg>
+                  <svg class="icon" width="16" height="16">
+                    <use xlink:href="img/icons/radio-checkbox-sprite.svg#radio-on"></use>
+                  </svg>
+                  <input class="visually-hidden" type="radio" id="thirty-less" name="fat-count" value="fat-thirty-less">
                   <label for="thirty-less">до 30%</label>
                 </p>
-                <p>
-                  <input type="radio" id="thirty-more" name="fat-count" value="fat-thirty-more">
+                <p class="fat-item">
+                  <svg class="icon" width="16" height="16">
+                    <use xlink:href="img/icons/radio-checkbox-sprite.svg#radio-off"></use>
+                  </svg>
+                  <svg class="icon" width="16" height="16">
+                    <use xlink:href="img/icons/radio-checkbox-sprite.svg#radio-on"></use>
+                  </svg>
+                  <input class="visually-hidden" type="radio" id="thirty-more" name="fat-count" value="fat-thirty-more">
                   <label for="thirty-more">выше 30%</label>
-                </p>
+                </p> -->
               </div>
             </fieldset>
             <fieldset class="filters-addons">
@@ -231,7 +263,9 @@
                   Сливочное с апельсиновым джемом и цитрусовой стружкой
                 </a>
               </h3>
-              <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+              <div class="fast-view pop-up">
+                <a class="assortment-item-view basic-button " href="">Быстрый просмотр</a>
+              </div>
             </li>
             <li class="assortment-item pop-up-trigger">
               <a class="item-img" href="">
