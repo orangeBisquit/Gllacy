@@ -1170,6 +1170,7 @@ tr:last-child .cart-item-title {
   width: 905px;
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 40px;
 }
 .filters fieldset {
   border: 0;
@@ -1259,20 +1260,15 @@ tr:last-child .cart-item-title {
 }
 /* fat amount */
 .filters-fat .filter-wrapper {
-  width: 439px;
-  padding-left: 47px;
+  width: 425px;
+  padding-left: 14px;
   padding-right: 17px;
-  
-  
 }
 .filters-fat .fat-item {
   position: relative;
-  margin-right: 10px; /* DELETE */
-  outline: 2px dashed red; /* DELETE */
 }
 
 .fat-item label {
-  outline: 1px solid yellow;
   padding-left: 33px;
 }
 
@@ -1308,13 +1304,49 @@ tr:last-child .cart-item-title {
 /* \\ addons */
 .filters-addons .filter-wrapper {
   width: 720px;
-  padding-left: 47px;
+  padding-left: 16px;
   padding-right: 17px;
 }
+.addon-item {
+  position: relative;
+}
 
+.addon-item input {
+  display: none;
+}
+.addon-item label {
+  position: relative;
+  padding-left: 34px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
 
+.addon-item input:checked ~ .checkbox-on {
+  display: block;
+}
 
+.addon-item input:checked ~ .checkbox-off {
+  display: none;
+}
 
+.addon-item input:not(:checked) ~ .checkbox-off {
+  display: block;
+}
+.addon-item input:not(:checked) ~ .checkbox-on {
+  display: none;
+}
+
+/* filter-apply */
+
+.filters button[type="submit"] {
+  width: 142px;
+  height: 34px;
+  border: 2px solid var(--main-color);
+  border-radius: 20px;
+  background: var(--transparent-light);
+  align-self: flex-end;
+  outline: 1px dashed red; /* DELETE */
+}
 
 /* \ page-nav */
 .page-number {
