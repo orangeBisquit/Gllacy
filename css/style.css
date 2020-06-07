@@ -365,6 +365,9 @@ ul.no-bullets {
 .login-link .icon {
   transform: translate(3px, -2px);
 }
+.login-links-wrapper a:hover {
+color: var(--dark-link-hover);
+}
 
 /* \\shopping-cart */
 .shopping-cart {
