@@ -15,7 +15,8 @@
       <header class="header">
         <div class="header-top">
           <a href="index.html" class="header-logo">
-            <img src="img/icons/logo.svg" alt="Лого Глейси" width="154" height="64" />
+            <img src="img/icons/logo.svg" alt="Лого Глейси" width="154" height="64"
+              aria-label="Ссылка на главную страницу" />
           </a>
           <nav>
             <ul class="main-nav no-bullets">
@@ -62,7 +63,7 @@
             </li>
             <li class="login pop-up-trigger">
               <a class="header-btn-item login-link" href="">
-                <svg class="icon" width="20" height="20">
+                <svg class="icon" width="21" height="20">
                   <use xlink:href="img/icons/btns-sprite.svg#entrance"></use>
                 </svg>
                 <span>Вход</span>
@@ -131,32 +132,36 @@
           </ul>
         </div>
         <div class="header-bottom">
-          <p class="header-work-hours">с 10 по 20, ежедневно</p>
-          <a href="tel:8-812-450-25-25" class="header-phone">8 812 450-25-25</a>
+          <div class="breadcrumbs">
+            <ul class="no-bullets">
+              <li class="breadcrumbs-item">
+                <a class="basic-link-light" href="index.html">Главная</a>
+              </li>
+              <li class="breadcrumbs-item">
+                <a class="basic-link-light">Каталог</a>
+              </li>
+              <li class="breadcrumbs-item">
+                <a class="basic-link-light">Сливочное</a>
+              </li>
+            </ul>
+          </div>
+          <div class="phone-hours-wrapper">
+            <p class="header-work-hours">с 10 до 20, ежедневно</p>
+            <a href="tel:8-812-450-25-25" class="header-phone">8 812 450-25-25</a>
+          </div>
+
         </div>
       </header>
 
       <main>
-        <div class="breadcrumbs">
-          <ul class="no-bullets">
-            <li class="breadcrumbs-item">
-              <a class="basic-link-light" href="index.html">Главная</a>
-            </li>
-            <li class="breadcrumbs-item">
-              <a class="basic-link-light">Каталог</a>
-            </li>
-            <li class="breadcrumbs-item">
-              <a class="basic-link-light">Сливочное</a>
-            </li>
-          </ul>
-        </div>
+
         <section class="filters">
-          <h2>Сливочное мороженное</h2>
+          <h2>Сливочное мороженое</h2>
           <form method="get" action="https://echo.htmlacademy.ru">
             <fieldset class="filters-sort">
               <legend>Сортировка:</legend>
               <div class="filter-wrapper">
-                <select class="filters-sort-item">
+                <select class="filters-sort-item" name="sort" aria-label="Сортировка товаров">
                   <option value="popularity">по популярности</option>
                   <option value="cheap">сначала недорогие</option>
                   <option value="expensive">сначала дорогие</option>
@@ -171,59 +176,34 @@
               <legend>Цена: 100 &#8381; - 500 &#8381;</legend>
               <div class="visually-hidden">
                 <label for="min-price">Цена от:</label>
-                <input type="number" name="min-price" id="min-price" value="100" tab-index="-1">
+                <input type="number" name="min-price" id="min-price" value="100">
                 <label for="max-price">Цена до:</label>
-                <input type="number" name="max-price" id="max-price" value="500" tab-index="-1">
+                <input type="number" name="max-price" id="max-price" value="500">
               </div>
               <div class="price-slider">
                 <div class="slider-bar"></div>
-                <div class="slider-range-min slider-range" tabindex="0"></div>
-                <div class="slider-range-max slider-range" tabindex="0"></div>
+                <button class="slider-range-min slider-range" aria-label="слайдер минимальная цена"></button>
+                <button class="slider-range-max slider-range" aria-label="слайдер максимальная цена"></button>
               </div>
             </fieldset>
             <fieldset class="filters-fat">
               <legend>Жирность:</legend>
               <div class="filter-wrapper">
-                <p class="fat-item" tab-index="0">
-                  <input class="visually-hidden" type="radio" id="zero" name="fat-count" value="fat-zero">
-                  <label for="zero">0%</label>
-                  <svg class="radio-off filter-input" width="22" height="22">
-                    <use xlink:href="img/icons/radio-checkbox-sprite.svg#radio-off"></use>
-                  </svg>
-                  <svg class="radio-on filter-input" width="22" height="22">
-                    <use xlink:href="img/icons/radio-checkbox-sprite.svg#radio-on"></use>
-                  </svg>
+                <p class="fat-item">
+                  <input class="fat-input visually-hidden" type="radio" id="zero" name="fat-count" value="fat-zero">
+                  <label class="fat-label" for="zero">0%</label>
                 </p>
                 <p class="fat-item">
                   <input class="visually-hidden" type="radio" id="ten" name="fat-count" value="fat-ten">
-                  <label for="ten">до 10%</label>
-                  <svg class="radio-off filter-input" width="22" height="22">
-                    <use xlink:href="img/icons/radio-checkbox-sprite.svg#radio-off"></use>
-                  </svg>
-                  <svg class="radio-on filter-input" width="22" height="22">
-                    <use xlink:href="img/icons/radio-checkbox-sprite.svg#radio-on"></use>
-                  </svg>
+                  <label class="fat-label" for="ten">до 10%</label>
                 </p>
                 <p class="fat-item">
                   <input class="visually-hidden" type="radio" id="thirty-less" name="fat-count" value="fat-thirty-less">
-                  <label for="thirty-less">до 30%</label>
-                  <svg class="radio-off filter-input" width="22" height="22">
-                    <use xlink:href="img/icons/radio-checkbox-sprite.svg#radio-off"></use>
-                  </svg>
-                  <svg class="radio-on filter-input" width="22" height="22">
-                    <use xlink:href="img/icons/radio-checkbox-sprite.svg#radio-on"></use>
-                  </svg>
+                  <label class="fat-label" for="thirty-less">до 30%</label>
                 </p>
                 <p class="fat-item">
-
                   <input class="visually-hidden" type="radio" id="thirty-more" name="fat-count" value="fat-thirty-more">
-                  <label for="thirty-more">выше 30%</label>
-                  <svg class="radio-off filter-input" width="22" height="22">
-                    <use xlink:href="img/icons/radio-checkbox-sprite.svg#radio-off"></use>
-                  </svg>
-                  <svg class="radio-on filter-input" width="22" height="22">
-                    <use xlink:href="img/icons/radio-checkbox-sprite.svg#radio-on"></use>
-                  </svg>
+                  <label class="fat-label" for="thirty-more">выше 30%</label>
                 </p>
               </div>
             </fieldset>
@@ -231,57 +211,26 @@
               <legend>Наполнители</legend>
               <div class="filter-wrapper">
                 <p class="addon-item">
-                  <input type="checkbox" id="chocolate" value="add-chocolate">
-                  <label for="chocolate">шоколадные</label>
-                  <svg class="checkbox-off filter-input" width="20" height="20">
-                    <use xlink:href="img/icons/radio-checkbox-sprite.svg#checkbox-off"></use>
-                  </svg>
-                  <svg class="checkbox-on filter-input" width="24" height="20">
-                    <use xlink:href="img/icons/radio-checkbox-sprite.svg#checkbox-on"></use>
-                  </svg>
+                  <input type="checkbox" id="chocolate" value="add-chocolate" name="addon">
+                  <label class="addon-label" for="chocolate">шоколадные</label>
                 </p>
                 <p class="addon-item">
-                  <input type="checkbox" id="sugar" value="add-sugar">
-                  <label for="sugar">сахарные присыпки</label>
-                  <svg class="checkbox-off filter-input" width="20" height="20">
-                    <use xlink:href="img/icons/radio-checkbox-sprite.svg#checkbox-off"></use>
-                  </svg>
-                  <svg class="checkbox-on filter-input" width="24" height="20">
-                    <use xlink:href="img/icons/radio-checkbox-sprite.svg#checkbox-on"></use>
-                  </svg>
+                  <input type="checkbox" id="sugar" value="add-sugar" name="addon">
+                  <label class="addon-label" for="sugar">сахарные присыпки</label>
                 </p>
                 <p class="addon-item">
-                  <input type="checkbox" id="fruits" value="add-fruits">
-                  <label for="fruits">фрукты</label>
-                  <svg class="checkbox-off filter-input" width="20" height="20">
-                    <use xlink:href="img/icons/radio-checkbox-sprite.svg#checkbox-off"></use>
-                  </svg>
-                  <svg class="checkbox-on filter-input" width="24" height="20">
-                    <use xlink:href="img/icons/radio-checkbox-sprite.svg#checkbox-on"></use>
-                  </svg>
+                  <input type="checkbox" id="fruits" value="add-fruits" name="addon">
+                  <label class="addon-label" for="fruits">фрукты</label>
                 </p>
                 <p class="addon-item">
-                  <input type="checkbox" id="syrops" value="add-syrops">
-                  <label for="syrops">сиропы</label>
-                  <svg class="checkbox-off filter-input" width="20" height="20">
-                    <use xlink:href="img/icons/radio-checkbox-sprite.svg#checkbox-off"></use>
-                  </svg>
-                  <svg class="checkbox-on filter-input" width="24" height="20">
-                    <use xlink:href="img/icons/radio-checkbox-sprite.svg#checkbox-on"></use>
-                  </svg>
+                  <input type="checkbox" id="syrops" value="add-syrops" name="addon">
+                  <label class="addon-label" for="syrops">сиропы</label>
                 </p>
                 <p class="addon-item">
-                  <input type="checkbox" id="jam" value="add-jam">
-                  <label for="jam">джемы</label>
-                  <svg class="checkbox-off filter-input" width="20" height="20">
-                    <use xlink:href="img/icons/radio-checkbox-sprite.svg#checkbox-off"></use>
-                  </svg>
-                  <svg class="checkbox-on filter-input" width="24" height="20">
-                    <use xlink:href="img/icons/radio-checkbox-sprite.svg#checkbox-on"></use>
-                  </svg>
+                  <input type="checkbox" id="jam" value="add-jam" name="addon">
+                  <label class="addon-label" for="jam">джемы</label>
                 </p>
               </div>
-
             </fieldset>
             <button type="submit">Применить</button>
           </form>
@@ -314,7 +263,9 @@
                   Сливочно-кофейное с кусочками шоколадаой
                 </a>
               </h3>
-              <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+              <div class="fast-view pop-up">
+                <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+              </div>
             </li>
             <li class="assortment-item pop-up-trigger">
               <a class="item-img" href="">
@@ -327,7 +278,9 @@
                   Сливочно-клубничное с присыпкой из белого шоколада
                 </a>
               </h3>
-              <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+              <div class="fast-view pop-up">
+                <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+              </div>
             </li>
             <li class="assortment-item pop-up-trigger">
               <a class="item-img" href="">
@@ -340,7 +293,9 @@
                   Сливочное крем-брюле с карамельной подливкой
                 </a>
               </h3>
-              <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+              <div class="fast-view pop-up">
+                <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+              </div>
             </li>
             <li class="assortment-item pop-up-trigger">
               <a class="item-img" href="">
@@ -352,7 +307,9 @@
                   Сливочное с брусничным джемом
                 </a>
               </h3>
-              <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+              <div class="fast-view pop-up">
+                <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+              </div>
             </li>
             <li class="assortment-item pop-up-trigger">
               <a class="item-img" href="">
@@ -365,7 +322,9 @@
                   Сливочно-черничное с цельными ягодами черники
                 </a>
               </h3>
-              <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+              <div class="fast-view pop-up">
+                <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+              </div>
             </li>
             <li class="assortment-item pop-up-trigger">
               <a class="item-img" href="">
@@ -378,7 +337,9 @@
                   Сливочно-лимонное с карамельной присыпкой
                 </a>
               </h3>
-              <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+              <div class="fast-view pop-up">
+                <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+              </div>
             </li>
             <li class="assortment-item pop-up-trigger">
               <a class="item-img" href="">
@@ -390,7 +351,9 @@
                   Сливочное с шоколадной стружкой
                 </a>
               </h3>
-              <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+              <div class="fast-view pop-up">
+                <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+              </div>
             </li>
             <li class="assortment-item pop-up-trigger">
               <a class="item-img" href="">
@@ -402,7 +365,9 @@
                   Сливочно-ванильное с кусочками шоколада
                 </a>
               </h3>
-              <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+              <div class="fast-view pop-up">
+                <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+              </div>
             </li>
             <li class="assortment-item pop-up-trigger">
               <a class="item-img" href="">
@@ -414,7 +379,9 @@
                   Сливочноe с ментоловым сиропом
                 </a>
               </h3>
-              <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+              <div class="fast-view pop-up">
+                <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+              </div>
             </li>
             <li class="assortment-item pop-up-trigger">
               <a class="item-img" href="">
@@ -426,7 +393,9 @@
                   Сливочное с кусочками черного шоколада
                 </a>
               </h3>
-              <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+              <div class="fast-view pop-up">
+                <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+              </div>
             </li>
             <li class="assortment-item pop-up-trigger">
               <a class="item-img" href="">
@@ -438,7 +407,9 @@
                   Сливочное с мятным сиропом
                 </a>
               </h3>
-              <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+              <div class="fast-view pop-up">
+                <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+              </div>
             </li>
           </ul>
         </section>
@@ -464,15 +435,15 @@
       <footer class="footer">
         <ul class="social-icons no-bullets">
           <li class="social-icons-item">
-            <a href="">
-              <span class="visually-hidden">Наш Фейсбук</span>
+            <a href="" aria-label="Ссылка на нашу страницу в Фейсбуке">
+              <span class="visually-hidden">Мы в Фейсбуке</span>
               <svg class="icon" width="36" height="36">
                 <use xlink:href="img/icons/social-sprite.svg#fb"></use>
               </svg>
             </a>
           </li>
           <li class="social-icons-item">
-            <a href="">
+            <a href="" aria-label="Ссылка на нашу страницу Вконтакте">
               <span class="visually-hidden">Мы Вконтакте</span>
               <svg class="icon" width="36" height="36">
                 <use xlink:href="img/icons/social-sprite.svg#vk"></use>
@@ -480,7 +451,7 @@
             </a>
           </li>
           <li class="social-icons-item">
-            <a href="">
+            <a href="" aria-label="Ссылка на наш Инстаграм">
               <span class="visually-hidden">Наш Инстаграм</span>
               <svg class="icon" width="36" height="36">
                 <use xlink:href="img/icons/social-sprite.svg#instagram"></use>
@@ -488,7 +459,7 @@
             </a>
           </li>
           <li class="social-icons-item">
-            <a href="">
+            <a href="" aria-label="Ссылка на нашу страницу в Твиттере">
               <span class="visually-hidden">Мы в Твиттере</span>
               <svg class="icon" width="36" height="36">
                 <use xlink:href="img/icons/social-sprite.svg#twitter"></use>
@@ -510,7 +481,9 @@
             <a class="basic-link-light" href="">Экологические стандарты</a></li>
         </ul>
         <div class="footer-copyright">
-          <img src="img/icons/logo-htmlacademy.svg" alt="Лого HTML Academy" width="108" height="39" />
+          <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Ссылка на сайт HTML Academy">
+            <img src="img/icons/logo-htmlacademy.svg" alt="Лого HTML Academy" width="108" height="39" />
+          </a>
           <p>
             Сделано в
             <a class="basic-link-light" href="https://htmlacademy.ru/intensive/htmlcss">

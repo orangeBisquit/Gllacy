@@ -50,7 +50,7 @@
           <ul class="header-btns no-bullets">
             <li class="search pop-up-trigger">
               <a class="header-btn-item search-link" href="#">
-                <span class="visually-hidden">Поиск</span>
+                <span class="visually-hidden">Поиск по сайту</span>
                 <svg class="icon" width="16" height="16">
                   <use xlink:href="img/icons/btns-sprite.svg#loupe"></use>
                 </svg>
@@ -61,7 +61,7 @@
               </form>
             </li>
             <li class="login pop-up-trigger">
-              <a class="header-btn-item login-link" href="">
+              <a class="header-btn-item login-link" href="" aria-label="Вход в личный аккаунт">
                 <svg class="icon" width="21" height="20">
                   <use xlink:href="img/icons/btns-sprite.svg#entrance"></use>
                 </svg>
@@ -86,15 +86,16 @@
             <li class="shopping-cart">
               <h2 class="visually-hidden">Корзина с товарами</h2>
               <a class="header-btn-item shopping-cart-link" href="">
-                <span>Пусто<span>
-
+                <span>Пусто</span>
               </a>
             </li>
           </ul>
         </div>
-        <div class="header-bottom">
-          <p class="header-work-hours">с 10 до 20, ежедневно</p>
-          <a href="tel:8-812-450-25-25" class="header-phone">8 812 450-25-25</a>
+        <div class="header-bottom header-bottom-main">
+          <div class="phone-hours-wrapper">
+            <p class="header-work-hours">с 10 до 20, ежедневно</p>
+            <a href="tel:8-812-450-25-25" class="header-phone">8 812 450-25-25</a>
+          </div>
         </div>
       </header>
       <main>
@@ -104,7 +105,7 @@
           <ul class="main-visual-slider">
             <li class="slider-item slide-current">
               <h3>Крем-брюле и пломбир с малиновым джемом</h3>
-              <a class="basic-button" href="catalog.html">Давайте оба!</a>
+              <a class="basic-button" href="catalog.html" aria-label="Ссылка на каталог товаров">Давайте оба!</a>
             </li>
             <li class="slider-item">
               <h3>Шоколадный пломбир и лимонный сорбет</h3>
@@ -117,9 +118,9 @@
             </li>
           </ul>
           <div class="slider-btns">
-            <button class="slider-btn-item" aria-label="Первый слайд"></button>
+            <button class="slider-btn-item slider-btn-active" aria-label="Первый слайд"></button>
             <button class="slider-btn-item" aria-label="Второй слайд"></button>
-            <button class="slider-btn-item slider-btn-active" aria-label="Третий слайд"></button>
+            <button class="slider-btn-item" aria-label="Третий слайд"></button>
           </div>
         </section>
         <div class="index-column advantages-row">
@@ -154,7 +155,9 @@
                   Сливочное с апельсиновым джемом и цитрусовой стружкой
                 </a>
               </h3>
-              <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+              <div class="fast-view pop-up">
+                <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+              </div>
             </li>
             <li class="assortment-item assortment-hit pop-up-trigger">
               <a class="item-img-box" href="catalog.html">
@@ -166,7 +169,9 @@
                   Сливочно-кофейное с кусочками шоколада
                 </a>
               </h3>
-              <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+              <div class="fast-view pop-up">
+                <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+              </div>
             </li>
             <li class="assortment-item assortment-hit pop-up-trigger">
               <a class="item-img-box" href="catalog.html">
@@ -180,7 +185,9 @@
                   с присыпкой из белого шоколада
                 </a>
               </h3>
-              <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+              <div class="fast-view pop-up">
+                <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+              </div>
             </li>
             <li class="assortment-item assortment-hit pop-up-trigger">
               <a class="item-img-box" href="catalog.html">
@@ -194,7 +201,9 @@
                   с карамельной подливкой
                 </a>
               </h3>
-              <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+              <div class="fast-view pop-up">
+                <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+              </div>
             </li>
           </ul>
         </section>
@@ -255,6 +264,8 @@
           </section>
         </div>
         <section class="our-location">
+          <img class="location-map-img" src="img/bg/map-bg.jpg" alt="Адрес главного офиса и магазина на карте"
+            width="1200" height="430">
           <div class="our-location-wrapper">
             <h2 class="visually-hidden">Наш адрес</h2>
             <div class="our-location-feedback">
@@ -274,15 +285,16 @@
           <h2 class="visually-hidden">Форма подтверждения рассылки</h2>
 
           <form class="basic-form" method="post" action="https://echo.htmlacademy.ru">
-            <button type="button">
-              <span class="visually-hidden">Закрыть форму</span>
+            <button type="button" aria-label="Закрыть форму">
             </button>
             <h3>Мы обязательно вам ответим!</h3>
-            <input class="basic-input" type="text" placeholder="Имя Фамилия" id="subscribe-name">
+            <input class="basic-input" type="text" placeholder="Имя Фамилия" id="subscribe-name" name="subscriber-name">
             <label for="subscribe-name" class="visually-hidden">Имя Фамилия</label>
-            <input class="basic-input" type="email" placeholder="email@example.com" id="subscribe-email">
+            <input class="basic-input" type="email" placeholder="email@example.com" id="subscribe-email"
+              name="subscriber-email">
             <label for="subscribe-email" class="visually-hidden">Электронная почта</label>
-            <textarea class="basic-input" id="subscribe-message" placeholder="В свободной форме"></textarea>
+            <textarea class="basic-input" id="subscribe-message" placeholder="В свободной форме"
+              name="subscriber-name"></textarea>
             <label class="visually-hidden" for="subscribe-message">Ваше сообщение</label>
             <button class="basic-button" type="submit">Отправить</button>
           </form>
@@ -291,15 +303,15 @@
       <footer class="footer">
         <ul class="social-icons no-bullets">
           <li class="social-icons-item">
-            <a href="">
-              <span class="visually-hidden">Наш Фейсбук</span>
+            <a href="" aria-label="Ссылка на нашу страницу в Фейсбуке">
+              <span class="visually-hidden">Мы в Фейсбуке</span>
               <svg class="icon" width="36" height="36">
                 <use xlink:href="img/icons/social-sprite.svg#fb"></use>
               </svg>
             </a>
           </li>
           <li class="social-icons-item">
-            <a href="">
+            <a href="" aria-label="Ссылка на нашу страницу Вконтакте">
               <span class="visually-hidden">Мы Вконтакте</span>
               <svg class="icon" width="36" height="36">
                 <use xlink:href="img/icons/social-sprite.svg#vk"></use>
@@ -307,7 +319,7 @@
             </a>
           </li>
           <li class="social-icons-item">
-            <a href="">
+            <a href="" aria-label="Ссылка на наш Инстаграм">
               <span class="visually-hidden">Наш Инстаграм</span>
               <svg class="icon" width="36" height="36">
                 <use xlink:href="img/icons/social-sprite.svg#instagram"></use>
@@ -315,7 +327,7 @@
             </a>
           </li>
           <li class="social-icons-item">
-            <a href="">
+            <a href="" aria-label="Ссылка на нашу страницу в Твиттере">
               <span class="visually-hidden">Мы в Твиттере</span>
               <svg class="icon" width="36" height="36">
                 <use xlink:href="img/icons/social-sprite.svg#twitter"></use>
@@ -337,7 +349,9 @@
             <a class="basic-link-light" href="">Экологические стандарты</a></li>
         </ul>
         <div class="footer-copyright">
-          <img src="img/icons/logo-htmlacademy.svg" alt="Лого HTML Academy" width="108" height="39" />
+          <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Ссылка на сайт HTML Academy">
+            <img src="img/icons/logo-htmlacademy.svg" alt="Лого HTML Academy" width="108" height="39" />
+          </a>
           <p>
             Сделано в
             <a class="basic-link-light" href="https://htmlacademy.ru/intensive/htmlcss">
