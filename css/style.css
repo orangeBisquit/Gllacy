@@ -969,16 +969,12 @@ ul.no-bullets {
   margin-bottom: 8px;
 }
 
-.subscription-form textarea:hover {
+.subscription-form textarea:hover,
+.subscription-form textarea:focus {
   padding-top: 10px;
   padding-left: 13px;
 }
 
-.subscription-form textarea:hover,
-.subscription-form textarea:focus {
-  padding-top: 14px;
-  padding-left: 14px;
-}
 .subscription-form button[type="button"] {
   width: 23px;
   height: 23px;
