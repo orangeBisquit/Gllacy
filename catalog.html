@@ -138,10 +138,10 @@
                 <a class="basic-link-light" href="index.html">Главная</a>
               </li>
               <li class="breadcrumbs-item">
-                <a class="basic-link-light">Каталог</a>
+                <a href="#" class="basic-link-light">Каталог</a>
               </li>
               <li class="breadcrumbs-item">
-                <a class="basic-link-light">Сливочное</a>
+                <a class="basic-link-light link-disabled">Сливочное</a>
               </li>
             </ul>
           </div>
@@ -149,12 +149,10 @@
             <p class="header-work-hours">с 10 до 20, ежедневно</p>
             <a href="tel:8-812-450-25-25" class="header-phone">8 812 450-25-25</a>
           </div>
-
         </div>
       </header>
 
       <main>
-
         <section class="filters">
           <h2>Сливочное мороженое</h2>
           <form method="get" action="https://echo.htmlacademy.ru">
@@ -173,17 +171,16 @@
               </div>
             </fieldset>
             <fieldset class="filters-price">
-              <legend>Цена: 100 &#8381; - 500 &#8381;</legend>
-              <div class="visually-hidden">
-                <label for="min-price">Цена от:</label>
-                <input type="number" name="min-price" id="min-price" value="100">
-                <label for="max-price">Цена до:</label>
-                <input type="number" name="max-price" id="max-price" value="500">
-              </div>
+              <legend>Цена: 100 &#8381; – 500 &#8381;</legend>
               <div class="price-slider">
-                <div class="slider-bar"></div>
-                <button class="slider-range-min slider-range" aria-label="слайдер минимальная цена"></button>
-                <button class="slider-range-max slider-range" aria-label="слайдер максимальная цена"></button>
+                <div class="slider-bar">
+                  <div class="slider-bar-range">
+                  </div>
+                </div>
+                <button class="slider-range-min slider-range" type="button"
+                  aria-label="слайдер минимальная цена"></button>
+                <button class="slider-range-max slider-range" type="button"
+                  aria-label="слайдер максимальная цена"></button>
               </div>
             </fieldset>
             <fieldset class="filters-fat">
@@ -194,7 +191,7 @@
                   <label class="fat-label" for="zero">0%</label>
                 </p>
                 <p class="fat-item">
-                  <input class="visually-hidden" type="radio" id="ten" name="fat-count" value="fat-ten">
+                  <input class="visually-hidden" type="radio" id="ten" name="fat-count" value="fat-ten" checked>
                   <label class="fat-label" for="ten">до 10%</label>
                 </p>
                 <p class="fat-item">
@@ -211,11 +208,11 @@
               <legend>Наполнители</legend>
               <div class="filter-wrapper">
                 <p class="addon-item">
-                  <input type="checkbox" id="chocolate" value="add-chocolate" name="addon">
+                  <input type="checkbox" id="chocolate" value="add-chocolate" name="addon" checked>
                   <label class="addon-label" for="chocolate">шоколадные</label>
                 </p>
                 <p class="addon-item">
-                  <input type="checkbox" id="sugar" value="add-sugar" name="addon">
+                  <input type="checkbox" id="sugar" value="add-sugar" name="addon" checked>
                   <label class="addon-label" for="sugar">сахарные присыпки</label>
                 </p>
                 <p class="addon-item">
@@ -414,9 +411,12 @@
           </ul>
         </section>
         <div class="page-number">
+          <a class="nav-arrow nav-arrow-prev link-disabled" aria-label="страница назад">
+            <span class="visually-hidden">Назад</span>
+          </a>
           <ul class="pages-nav no-bullets">
             <li class="pages-nav-item">
-              <a class="current-page-num" href="">1</a></li>
+              <a class="current-page-num">1</a></li>
             <li class="pages-nav-item">
               <a href="">2</a>
             </li>
@@ -430,6 +430,9 @@
               <a href="">5</a>
             </li>
           </ul>
+          <a class="nav-arrow nav-arrow-next" aria-label="страница вперед">
+            <span class="visually-hidden">Вперед</span>
+          </a>
         </div>
       </main>
       <footer class="footer">
