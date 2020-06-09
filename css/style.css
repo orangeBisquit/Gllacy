@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 2 version,not dead,not ie <= 11
+*/
+
 /* || GLOBAL */
 :root {
   --bg-wrapper-one: #849d8f;
@@ -95,12 +102,14 @@ img {
 /* || Page layout */
 body {
   display: grid;
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
 }
 
 .index-column {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 26px;
   column-gap: 26px;
 }
 
@@ -113,6 +122,7 @@ ul.no-bullets {
 .basic-link-light {
   color: var(--main-color);
   text-decoration: underline;
+  -webkit-text-decoration-color: var(--transparent-light);
   text-decoration-color: var(--transparent-light);
 }
 .basic-link-light:hover,
@@ -126,6 +136,7 @@ ul.no-bullets {
 .basic-link-dark:active {
   color: var(--dark-link-hover);
   text-decoration: underline;
+  -webkit-text-decoration-color: var(--dark-link-underlne);
   text-decoration-color: var(--dark-link-underlne);
 }
 .link-disabled,
@@ -194,6 +205,16 @@ ul.no-bullets {
   outline: none;
 }
 
+.basic-input::-webkit-input-placeholder {
+  font-size: 14px;
+  color: var(--cart-price);
+}
+
+.basic-input::-moz-placeholder {
+  font-size: 14px;
+  color: var(--cart-price);
+}
+
 .basic-input::placeholder {
   font-size: 14px;
   color: var(--cart-price);
@@ -219,6 +240,7 @@ ul.no-bullets {
   border: 0;
   padding: 0;
   white-space: nowrap;
+  -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
@@ -444,6 +466,14 @@ ul.no-bullets {
   line-height: 22px;
   font-weight: 700;
 }
+.search-form input:focus::-webkit-input-placeholder,
+.login-form input:focus::-webkit-input-placeholder {
+  font-weight: 400;
+}
+.search-form input:focus::-moz-placeholder,
+.login-form input:focus::-moz-placeholder {
+  font-weight: 400;
+}
 .search-form input:focus::placeholder,
 .login-form input:focus::placeholder {
   font-weight: 400;
@@ -644,6 +674,7 @@ ul.no-bullets {
   margin: 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  -moz-column-gap: 26px;
   column-gap: 26px;
   row-gap: 36px;
 }
@@ -745,6 +776,7 @@ ul.no-bullets {
   margin: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 31px;
   column-gap: 31px;
   row-gap: 22px;
 }
@@ -911,6 +943,14 @@ ul.no-bullets {
   padding-left: 14px;
   font-size: 16px;
   line-height: 20px;
+}
+.subscription-form input::-webkit-input-placeholder,
+.subscription-form textarea::-webkit-input-placeholder {
+  font-size: 16px;
+}
+.subscription-form input::-moz-placeholder,
+.subscription-form textarea::-moz-placeholder {
+  font-size: 16px;
 }
 .subscription-form input::placeholder,
 .subscription-form textarea::placeholder {
@@ -1132,6 +1172,7 @@ ul.no-bullets {
 .footer-copyright a:hover {
   color: var(--light-link-hover);
   text-decoration: underline;
+  -webkit-text-decoration-color: var(----light-link-underline);
   text-decoration-color: var(----light-link-underline);
 }
 
