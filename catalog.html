@@ -14,37 +14,37 @@
     <div class="container">
       <header class="header">
         <div class="header-top">
-          <a href="index.html" class="header-logo">
+          <a href="index.html" class="header-logo" aria-label="Ссылка на главную страницу">
             <img src="img/icons/logo.svg" alt="Лого Глейси" width="154" height="64"
               aria-label="Ссылка на главную страницу" />
           </a>
           <nav>
             <ul class="main-nav no-bullets">
               <li class="main-nav-item pop-up-trigger">
-                <a class="basic-link-light current-page" href="">Каталог</a>
+                <a class="basic-link-light current-page" href="#">Каталог</a>
                 <ul class="sub-menu pop-up no-bullets">
                   <li class="sub-menu-item">
-                    <a>Новинки</a>
+                    <a href="#">Новинки</a>
                   </li>
                   <li class="sub-menu-item">
-                    <a class="current-sub-page" href="">Сливочное</a>
+                    <a class="current-sub-page" href="#">Сливочное</a>
                   </li>
                   <li class="sub-menu-item">
-                    <a href="">Щербеты</a>
+                    <a href="#">Щербеты</a>
                   </li>
                   <li class="sub-menu-item">
-                    <a href="">Фруктовый лед</a>
+                    <a href="#">Фруктовый лед</a>
                   </li>
                   <li class="sub-menu-item">
-                    <a href="">Мелорин</a>
+                    <a href="#">Мелорин</a>
                   </li>
                 </ul>
               </li>
               <li class="main-nav-item">
-                <a class="basic-link-light" href="">Доставка и оплата</a>
+                <a class="basic-link-light" href="#">Доставка и оплата</a>
               </li>
               <li class="main-nav-item">
-                <a class="basic-link-light" href="">О компании</a>
+                <a class="basic-link-light" href="#">О компании</a>
               </li>
             </ul>
           </nav>
@@ -62,7 +62,7 @@
               </form>
             </li>
             <li class="login pop-up-trigger">
-              <a class="header-btn-item login-link" href="">
+              <a class="header-btn-item login-link" href="#">
                 <svg class="icon" width="21" height="20">
                   <use xlink:href="img/icons/btns-sprite.svg#entrance"></use>
                 </svg>
@@ -78,49 +78,53 @@
                 <div class="login-bottom-wrapper">
                   <button class="basic-button" type="submit">Войти</button>
                   <div class="login-links-wrapper">
-                    <a href="">Забыли пароль?</a>
-                    <a href="">Новая регистрация</a>
+                    <a href="#">Забыли пароль?</a>
+                    <a href="#">Новая регистрация</a>
                   </div>
                 </div>
               </form>
             </li>
             <li class="shopping-cart cart-full pop-up-trigger">
               <h2 class="visually-hidden">Корзина с товарами</h2>
-              <a class="header-btn-item shopping-cart-link" href="">2 товара</a>
+              <a class="header-btn-item shopping-cart-link" href="#">2 товара</a>
               <div class="pop-up">
-                <table>
-                  <tr class="cart-full-item cart-row">
-                    <td class="cart-delete-item">
+                <table class="cart-table">
+                  <tr class="cart-item cart-row">
+                    <td class="item-delete item-data">
                       <button type="button" class="delete-cart-item">
                         <span class="visually-hidden">Удалить товар</span>
                       </button>
                     </td>
-                    <td class="cart-image cart-row">
+                    <td class="item-image item-data">
                       <img src="img/ice-cream-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
                     </td>
-                    <td class="cart-item-title cart-row">Пломбир с апельсиновым джемом</td>
-                    <td class="cart-amount cart-row">
+                    <td class="item-name item-data">
+                      <span>Пломбир с апельсиновым джемом</span>
+                    </td>
+                    <td class="item-amount item-data">
                       <span>1,5 кг х</span>
                       <span class="price-gray">200 руб.</span>
                     </td>
-                    <td class="cart-row">300 руб.</td>
+                    <td class="item-price-total item-data">300 руб.</td>
                   </tr>
-                  <tr class="cart-full-item">
-                    <td class="cart-delete-item cart-row">
+                  <tr class="cart-item">
+                    <td class="item-delete item-data">
                       <button type="button" class="delete-cart-item">
                         <span class="visually-hidden">Удалить товар</span>
                       </button>
                     </td>
-                    <td class="cart-image cart-row">
+                    <td class="item-image item-data">
                       <img src="img/ice-cream-3.jpg" width="33" height="33"
                         alt="Клубничный пломбир с присыпкой из белого шоколада">
                     </td>
-                    <td class="cart-item-title cart-row">Клубничный пломбир с присыпкой из белого шоколада</td>
-                    <td class="cart-amount cart-row">
+                    <td class="item-name item-data">
+                      <span> Клубничный пломбир с присыпкой из белого шоколада</span>
+                    </td>
+                    <td class="item-amount item-data">
                       <span>1,5 кг х</span>
                       <span class="price-gray">300 руб.</span>
                     </td>
-                    <td class="cart-row">450 руб.</td>
+                    <td class="item-price-total item-data">450 руб.</td>
                   </tr>
                 </table>
                 <div class="cart-bottom-wrapper">
@@ -232,180 +236,180 @@
             <button type="submit">Применить</button>
           </form>
         </section>
-        <section class="assortment">
+        <section class="assortment assortment-catalog">
           <h2 class="visually-hidden">Ассортимент</h2>
           <ul class="no-bullets">
             <li class="assortment-item pop-up-trigger">
-              <a class="item-img" href="">
+              <a class="item-img-box" href="#">
                 <img alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" src="img/ice-cream-1.jpg" width="267"
                   height="267" />
               </a>
               <p class="assortment-price">310 &#8381;<span>/кг</span></p>
               <h3 class="assortment-descr">
-                <a class="basic-link-light" href="">
+                <a class="basic-link-light" href="#">
                   Сливочное с апельсиновым джемом и цитрусовой стружкой
                 </a>
               </h3>
               <div class="fast-view pop-up">
-                <a class="assortment-item-view basic-button " href="">Быстрый просмотр</a>
+                <a class="assortment-item-view basic-button " href="#">Быстрый просмотр</a>
               </div>
             </li>
             <li class="assortment-item pop-up-trigger">
-              <a class="item-img" href="">
+              <a class="item-img-box" href="#">
                 <img alt="Сливочно-кофейное с кусочками шоколада" src="img/ice-cream-2.jpg" width="267" height="267" />
               </a>
               <p class="assortment-price">380 &#8381;<span>/кг</span></p>
               <h3 class="assortment-descr">
-                <a class="basic-link-light" href="">
-                  Сливочно-кофейное с кусочками шоколадаой
+                <a class="basic-link-light" href="#">
+                  Сливочно-кофейное с кусочками шоколада
                 </a>
               </h3>
               <div class="fast-view pop-up">
-                <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+                <a class="assortment-item-view basic-button pop-up" href="#">Быстрый просмотр</a>
               </div>
             </li>
             <li class="assortment-item pop-up-trigger">
-              <a class="item-img" href="">
+              <a class="item-img-box" href="#">
                 <img alt="Сливочно-клубничное с присыпкой из белого шоколада" src="img/ice-cream-3.jpg" width="267"
                   height="267" />
               </a>
               <p class="assortment-price">355 &#8381;<span>/кг</span></p>
               <h3 class="assortment-descr">
-                <a class="basic-link-light" href="">
+                <a class="basic-link-light" href="#">
                   Сливочно-клубничное с присыпкой из белого шоколада
                 </a>
               </h3>
               <div class="fast-view pop-up">
-                <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+                <a class="assortment-item-view basic-button pop-up" href="#">Быстрый просмотр</a>
               </div>
             </li>
             <li class="assortment-item pop-up-trigger">
-              <a class="item-img" href="">
+              <a class="item-img-box" href="#">
                 <img alt="Сливочное крем-брюле с карамельной подливкой" src="img/ice-cream-4.jpg" width="267"
                   height="267" />
               </a>
               <p class="assortment-price">415 &#8381;<span>/кг</span></p>
               <h3 class="assortment-descr">
-                <a class="basic-link-light" href="">
-                  Сливочное крем-брюле с карамельной подливкой
+                <a class="basic-link-light" href="#">
+                  Сливочное крем-брюле <br> с карамельной подливкой
                 </a>
               </h3>
               <div class="fast-view pop-up">
-                <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+                <a class="assortment-item-view basic-button pop-up" href="#">Быстрый просмотр</a>
               </div>
             </li>
             <li class="assortment-item pop-up-trigger">
-              <a class="item-img" href="">
+              <a class="item-img-box" href="#">
                 <img alt="Сливочное с брусничным джемом" src="img/ice-cream-5.jpg" width="267" height="267" />
               </a>
               <p class="assortment-price">325 &#8381;<span>/кг</span></p>
               <h3 class="assortment-descr">
-                <a class="basic-link-light" href="">
+                <a class="basic-link-light" href="#">
                   Сливочное с брусничным джемом
                 </a>
               </h3>
               <div class="fast-view pop-up">
-                <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+                <a class="assortment-item-view basic-button pop-up" href="#">Быстрый просмотр</a>
               </div>
             </li>
             <li class="assortment-item pop-up-trigger">
-              <a class="item-img" href="">
+              <a class="item-img-box" href="#">
                 <img alt="Сливочно-черничное с цельными ягодами черники" src="img/ice-cream-6.jpg" width="267"
                   height="267" />
               </a>
               <p class="assortment-price">410 &#8381;<span>/кг</span></p>
               <h3 class="assortment-descr">
-                <a class="basic-link-light" href="">
+                <a class="basic-link-light" href="#">
                   Сливочно-черничное с цельными ягодами черники
                 </a>
               </h3>
               <div class="fast-view pop-up">
-                <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+                <a class="assortment-item-view basic-button pop-up" href="#">Быстрый просмотр</a>
               </div>
             </li>
             <li class="assortment-item pop-up-trigger">
-              <a class="item-img" href="">
+              <a class="item-img-box" href="#">
                 <img alt="Сливочно-лимонное с карамельной присыпкой" src="img/ice-cream-7.jpg" width="267"
                   height="267" />
               </a>
               <p class="assortment-price">315 &#8381;<span>/кг</span></p>
               <h3 class="assortment-descr">
-                <a class="basic-link-light" href="">
+                <a class="basic-link-light" href="#">
                   Сливочно-лимонное с карамельной присыпкой
                 </a>
               </h3>
               <div class="fast-view pop-up">
-                <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+                <a class="assortment-item-view basic-button pop-up" href="#">Быстрый просмотр</a>
               </div>
             </li>
             <li class="assortment-item pop-up-trigger">
-              <a class="item-img" href="">
+              <a class="item-img-box" href="#">
                 <img alt="Сливочное с шоколадной стружкой" src="img/ice-cream-8.jpg" width="267" height="267" />
               </a>
               <p class="assortment-price">320 &#8381;<span>/кг</span></p>
               <h3 class="assortment-descr">
-                <a class="basic-link-light" href="">
+                <a class="basic-link-light" href="#">
                   Сливочное с шоколадной стружкой
                 </a>
               </h3>
               <div class="fast-view pop-up">
-                <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+                <a class="assortment-item-view basic-button pop-up" href="#">Быстрый просмотр</a>
               </div>
             </li>
             <li class="assortment-item pop-up-trigger">
-              <a class="item-img" href="">
+              <a class="item-img-box" href="#">
                 <img alt="Сливочно-ванильное с кусочками шоколада" src="img/ice-cream-9.jpg" width="267" height="267" />
               </a>
               <p class="assortment-price">440 &#8381;<span>/кг</span></p>
               <h3 class="assortment-descr">
-                <a class="basic-link-light" href="">
-                  Сливочно-ванильное с кусочками шоколада
+                <a class="basic-link-light" href="#">
+                  Сливочно-ванильное <br> с кусочками шоколада
                 </a>
               </h3>
               <div class="fast-view pop-up">
-                <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+                <a class="assortment-item-view basic-button pop-up" href="#">Быстрый просмотр</a>
               </div>
             </li>
             <li class="assortment-item pop-up-trigger">
-              <a class="item-img" href="">
+              <a class="item-img-box" href="#">
                 <img alt="Сливочноe с ментоловым сиропом" src="img/ice-cream-10.jpg" width="267" height="267" />
               </a>
               <p class="assortment-price">435 &#8381;<span>/кг</span></p>
               <h3 class="assortment-descr">
-                <a class="basic-link-light" href="">
+                <a class="basic-link-light" href="#">
                   Сливочноe с ментоловым сиропом
                 </a>
               </h3>
               <div class="fast-view pop-up">
-                <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+                <a class="assortment-item-view basic-button pop-up" href="#">Быстрый просмотр</a>
               </div>
             </li>
             <li class="assortment-item pop-up-trigger">
-              <a class="item-img" href="">
+              <a class="item-img-box" href="#">
                 <img alt="Сливочное с кусочками черного шоколада" src="img/ice-cream-11.jpg" width="267" height="267" />
               </a>
               <p class="assortment-price">355 &#8381;<span>/кг</span></p>
               <h3 class="assortment-descr">
-                <a class="basic-link-light" href="">
+                <a class="basic-link-light" href="#">
                   Сливочное с кусочками черного шоколада
                 </a>
               </h3>
               <div class="fast-view pop-up">
-                <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+                <a class="assortment-item-view basic-button pop-up" href="#">Быстрый просмотр</a>
               </div>
             </li>
             <li class="assortment-item pop-up-trigger">
-              <a class="item-img" href="">
+              <a class="item-img-box" href="#">
                 <img alt="Сливочное с мятным сиропом" src="img/ice-cream-12.jpg" width="267" height="267" />
               </a>
               <p class="assortment-price">420 &#8381;<span>/кг</span></p>
               <h3 class="assortment-descr">
-                <a class="basic-link-light" href="">
+                <a class="basic-link-light" href="#">
                   Сливочное с мятным сиропом
                 </a>
               </h3>
               <div class="fast-view pop-up">
-                <a class="assortment-item-view basic-button pop-up" href="">Быстрый просмотр</a>
+                <a class="assortment-item-view basic-button pop-up" href="#">Быстрый просмотр</a>
               </div>
             </li>
           </ul>
@@ -418,16 +422,16 @@
             <li class="pages-nav-item">
               <a class="current-page-num">1</a></li>
             <li class="pages-nav-item">
-              <a href="">2</a>
+              <a href="#">2</a>
             </li>
             <li class="pages-nav-item">
-              <a href="">3</a>
+              <a href="#">3</a>
             </li>
             <li class="pages-nav-item">
-              <a href="">4</a>
+              <a href="#">4</a>
             </li>
             <li class="pages-nav-item">
-              <a href="">5</a>
+              <a href="#">5</a>
             </li>
           </ul>
           <a class="nav-arrow nav-arrow-next" aria-label="страница вперед">
@@ -438,7 +442,7 @@
       <footer class="footer">
         <ul class="social-icons no-bullets">
           <li class="social-icons-item">
-            <a href="" aria-label="Ссылка на нашу страницу в Фейсбуке">
+            <a href="#" aria-label="Ссылка на нашу страницу в Фейсбуке">
               <span class="visually-hidden">Мы в Фейсбуке</span>
               <svg class="icon" width="36" height="36">
                 <use xlink:href="img/icons/social-sprite.svg#fb"></use>
@@ -446,7 +450,7 @@
             </a>
           </li>
           <li class="social-icons-item">
-            <a href="" aria-label="Ссылка на нашу страницу Вконтакте">
+            <a href="#" aria-label="Ссылка на нашу страницу Вконтакте">
               <span class="visually-hidden">Мы Вконтакте</span>
               <svg class="icon" width="36" height="36">
                 <use xlink:href="img/icons/social-sprite.svg#vk"></use>
@@ -454,7 +458,7 @@
             </a>
           </li>
           <li class="social-icons-item">
-            <a href="" aria-label="Ссылка на наш Инстаграм">
+            <a href="#" aria-label="Ссылка на наш Инстаграм">
               <span class="visually-hidden">Наш Инстаграм</span>
               <svg class="icon" width="36" height="36">
                 <use xlink:href="img/icons/social-sprite.svg#instagram"></use>
@@ -462,7 +466,7 @@
             </a>
           </li>
           <li class="social-icons-item">
-            <a href="" aria-label="Ссылка на нашу страницу в Твиттере">
+            <a href="#" aria-label="Ссылка на нашу страницу в Твиттере">
               <span class="visually-hidden">Мы в Твиттере</span>
               <svg class="icon" width="36" height="36">
                 <use xlink:href="img/icons/social-sprite.svg#twitter"></use>
@@ -472,16 +476,16 @@
         </ul>
         <ul class="footer-nav no-bullets">
           <li class="footer-nav-item">
-            <a class="basic-link-light" href="">Для поставщиков</a>
+            <a class="basic-link-light" href="#">Для поставщиков</a>
           </li>
           <li class="footer-nav-item">
-            <a class="basic-link-light" href="">Наши документы</a>
+            <a class="basic-link-light" href="#">Наши документы</a>
           </li>
           <li class="footer-nav-item">
-            <a class="basic-link-light" href="">О производстве</a>
+            <a class="basic-link-light" href="#">О производстве</a>
           </li>
           <li class="footer-nav-item">
-            <a class="basic-link-light" href="">Экологические стандарты</a></li>
+            <a class="basic-link-light" href="#">Экологические стандарты</a></li>
         </ul>
         <div class="footer-copyright">
           <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Ссылка на сайт HTML Academy">
