@@ -76,16 +76,19 @@ img {
 .wrapper-one {
   background-color: var(--bg-wrapper-one);
   background-image: url("../img/main-slide-3.png");
+  transition: 0.7s;
 }
 
 .wrapper-two {
   background-color: var(--bg-wrapper-two);
   background-image: url("../img/main-slide-2.png");
+  transition: 0.7s;
 }
 
 .wrapper-three {
   background-color: var(--bg-wrapper-three);
   background-image: url("../img/main-slide-3.png");
+  transition: 0.7s;
 }
 
 .container {
