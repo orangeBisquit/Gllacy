@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Глейси</title>
 </head>
 
@@ -118,9 +118,13 @@
             </li>
           </ul>
           <div class="slider-btns">
-            <button class="slider-btn-item slider-btn-current" aria-label="Первый слайд"></button>
-            <button class="slider-btn-item" aria-label="Второй слайд"></button>
-            <button class="slider-btn-item" aria-label="Третий слайд"></button>
+            <input class="slider-radio" type="radio" name="slider-radio" id="slider-radio-1" onchange="sliderChanger()"
+              checked>
+            <label for="slider-radio-1" class="slider-btn-item" aria-label="Первый слайд"></label>
+            <input class="slider-radio" type="radio" name="slider-radio" id="slider-radio-2" onchange="sliderChanger()">
+            <label for="slider-radio-2" class="slider-btn-item" aria-label="Второй слайд"></label>
+            <input class="slider-radio" type="radio" name="slider-radio" id="slider-radio-3" onchange="sliderChanger()">
+            <label for="slider-radio-3" class="slider-btn-item" aria-label="Третий слайд"></label>
           </div>
         </section>
         <div class="index-column advantages-row">
@@ -267,6 +271,9 @@
           <img src="img/bg/map-bg.jpg"
             alt="Расположение магазина Глейси на карте (ул. Большая Конюшенная, 19/8, Санкт-Петербург)" width="1200"
             height="430">
+          <iframe class="interactive-map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533238!2d30.320858715921293!3d59.938716481876206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20Russia%2C%20191186!5e0!3m2!1sen!2skg!4v1591963988121!5m2!1sen!2skg"
+            style="border:0;" allowfullscreen=""></iframe>
           <div class="our-location-wrapper">
             <h2 class="visually-hidden">Наш адрес</h2>
             <p class="location-address">Адрес главного офиса <br>
@@ -277,7 +284,7 @@
               <a class="basic-link-dark" href="tel:8-812-450-25-25">8 812 450-25-25</a><br />
               (с 10 до 20 ежедневно)
             </p>
-            <button class="basic-button">Форма обратной связи</button>
+            <button class="sub-form-trigger basic-button">Форма обратной связи</button>
           </div>
         </section>
       </main>
@@ -343,24 +350,26 @@
         </div>
       </footer>
     </div>
-    <section class="subscription-form">
+    <section class="supscription-overlay">
       <h2 class="visually-hidden">Форма подтверждения рассылки</h2>
-      <form class="basic-form modal" method="post" action="https://echo.htmlacademy.ru">
-        <button type="button" aria-label="Закрыть форму">
+      <form class="supscription-form basic-form" method="post" action="https://echo.htmlacademy.ru">
+        <button class="modal-close" type="button" aria-label="Закрыть форму">
         </button>
         <h3>Мы обязательно вам ответим!</h3>
-        <input class="basic-input" type="text" placeholder="Имя Фамилия" id="subscribe-name" name="subscriber-name">
+        <input class="basic-input" type="text" placeholder="Имя Фамилия" id="subscribe-name" name="subscriber-name"
+          required>
         <label for="subscribe-name" class="visually-hidden">Имя Фамилия</label>
         <input class="basic-input" type="email" placeholder="email@example.com" id="subscribe-email"
-          name="subscriber-email">
+          name="subscriber-email" required>
         <label for="subscribe-email" class="visually-hidden">Электронная почта</label>
-        <textarea class="basic-input" id="subscribe-message" placeholder="В свободной форме"
-          name="subscriber-name"></textarea>
+        <textarea class="basic-input" id="subscribe-message" placeholder="В свободной форме" name="subscriber-name"
+          required></textarea>
         <label class="visually-hidden" for="subscribe-message">Ваше сообщение</label>
         <button class="basic-button" type="submit">Отправить</button>
       </form>
     </section>
   </div>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

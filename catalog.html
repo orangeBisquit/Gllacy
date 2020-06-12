@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Глейси</title>
 </head>
 
@@ -191,19 +191,19 @@
               <legend>Жирность:</legend>
               <div class="filter-wrapper">
                 <p class="fat-item">
-                  <input class="fat-input visually-hidden" type="radio" id="zero" name="fat-count" value="fat-zero">
+                  <input class="fat-input" type="radio" id="zero" name="fat-count" value="fat-zero">
                   <label class="fat-label" for="zero">0%</label>
                 </p>
                 <p class="fat-item">
-                  <input class="visually-hidden" type="radio" id="ten" name="fat-count" value="fat-ten" checked>
+                  <input class="fat-input" type="radio" id="ten" name="fat-count" value="fat-ten" checked>
                   <label class="fat-label" for="ten">до 10%</label>
                 </p>
                 <p class="fat-item">
-                  <input class="visually-hidden" type="radio" id="thirty-less" name="fat-count" value="fat-thirty-less">
+                  <input class="fat-input" type="radio" id="thirty-less" name="fat-count" value="fat-thirty-less">
                   <label class="fat-label" for="thirty-less">до 30%</label>
                 </p>
                 <p class="fat-item">
-                  <input class="visually-hidden" type="radio" id="thirty-more" name="fat-count" value="fat-thirty-more">
+                  <input class="fat-input" type="radio" id="thirty-more" name="fat-count" value="fat-thirty-more">
                   <label class="fat-label" for="thirty-more">выше 30%</label>
                 </p>
               </div>
@@ -212,23 +212,23 @@
               <legend>Наполнители</legend>
               <div class="filter-wrapper">
                 <p class="addon-item">
-                  <input type="checkbox" id="chocolate" value="add-chocolate" name="addon" checked>
+                  <input class="addon-input" type="checkbox" id="chocolate" value="add-chocolate" name="addon" checked>
                   <label class="addon-label" for="chocolate">шоколадные</label>
                 </p>
                 <p class="addon-item">
-                  <input type="checkbox" id="sugar" value="add-sugar" name="addon" checked>
+                  <input class="addon-input" type="checkbox" id="sugar" value="add-sugar" name="addon" checked>
                   <label class="addon-label" for="sugar">сахарные присыпки</label>
                 </p>
                 <p class="addon-item">
-                  <input type="checkbox" id="fruits" value="add-fruits" name="addon">
+                  <input class="addon-input" type="checkbox" id="fruits" value="add-fruits" name="addon">
                   <label class="addon-label" for="fruits">фрукты</label>
                 </p>
                 <p class="addon-item">
-                  <input type="checkbox" id="syrops" value="add-syrops" name="addon">
+                  <input class="addon-input" type="checkbox" id="syrops" value="add-syrops" name="addon">
                   <label class="addon-label" for="syrops">сиропы</label>
                 </p>
                 <p class="addon-item">
-                  <input type="checkbox" id="jam" value="add-jam" name="addon">
+                  <input class="addon-input" type="checkbox" id="jam" value="add-jam" name="addon">
                   <label class="addon-label" for="jam">джемы</label>
                 </p>
               </div>
@@ -434,7 +434,7 @@
               <a href="#">5</a>
             </li>
           </ul>
-          <a class="nav-arrow nav-arrow-next" aria-label="страница вперед">
+          <a href="#" class="nav-arrow nav-arrow-next" aria-label="страница вперед">
             <span class="visually-hidden">Вперед</span>
           </a>
         </div>
