@@ -3,11 +3,13 @@ var subButton = document.querySelector(".sub-form-trigger");
 var subOverlay = document.querySelector(".supscription-overlay");
 var subForm = document.querySelector(".supscription-form");
 var subOverlayClose = document.querySelector(".modal-close");
+var feedLogin = document.querySelector(".feedback-login");
 
 subButton.addEventListener("click", function (evt) {
   evt.preventDefault();
   subOverlay.classList.add("overlay-show");
   subForm.classList.add("modal-show");
+  feedLogin.focus();
 });
 
 subOverlayClose.addEventListener("click", function (evt) {

@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <title>HTML Academy: Глейси</title>
 </head>
 
@@ -51,7 +51,7 @@
           <ul class="header-btns no-bullets">
             <li class="search pop-up-trigger">
               <a class="header-btn-item search-link" href="#">
-                <span class="visually-hidden">Поиск</span>
+                <span class="visually-hidden">Поиск по сайту</span>
                 <svg class="icon" width="16" height="16">
                   <use xlink:href="img/icons/btns-sprite.svg#loupe"></use>
                 </svg>
@@ -62,7 +62,7 @@
               </form>
             </li>
             <li class="login pop-up-trigger">
-              <a class="header-btn-item login-link" href="#">
+              <a class="header-btn-item login-link" href="#" aria-label="Вход в личный аккаунт">
                 <svg class="icon" width="21" height="20">
                   <use xlink:href="img/icons/btns-sprite.svg#entrance"></use>
                 </svg>
@@ -151,7 +151,7 @@
           </div>
           <div class="phone-hours-wrapper">
             <p class="header-work-hours">с 10 до 20, ежедневно</p>
-            <a href="tel:8-812-450-25-25" class="header-phone">8 812 450-25-25</a>
+            <a href="tel:8-812-450-25-25" class="header-phone basic-link-light">8 812 450-25-25</a>
           </div>
         </div>
       </header>
@@ -176,6 +176,8 @@
             </fieldset>
             <fieldset class="filters-price">
               <legend>Цена: 100 &#8381; – 500 &#8381;</legend>
+              <input type="number" name="price-low" value="100">
+              <input type="number" name="price-high" value="500">
               <div class="price-slider">
                 <div class="slider-bar">
                   <div class="slider-bar-range">

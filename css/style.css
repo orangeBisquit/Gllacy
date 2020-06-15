@@ -1,3 +1,8 @@
+/*
+Autoprefixer: v9.7.6
+Browsers: last 2 version,not dead,not ie <= 11
+*/
+
 /* || GLOBAL */
 :root {
   --bg-wrapper-one: #849d8f;
@@ -301,7 +306,7 @@ ul.no-bullets {
   top: 40px;
   left: -7px;
   width: 143px;
-  height: 171px;
+  min-height: 171px;
   border-radius: 4px;
   background-color: var(--main-color);
 }
@@ -310,7 +315,7 @@ ul.no-bullets {
   display: block;
   color: var(--main-color-dark);
   text-decoration: none;
-  padding: 7px 0 8px 21px;
+  padding: 7px 8px 8px 21px;
   font-size: 14px;
   line-height: 16px;
 }
@@ -465,6 +470,22 @@ ul.no-bullets {
   line-height: 22px;
   font-weight: 700;
   outline: none;
+}
+.search-form input:focus::-webkit-input-placeholder,
+.login-form input:focus::-webkit-input-placeholder {
+  font-weight: 400;
+}
+.search-form input:focus::-moz-placeholder,
+.login-form input:focus::-moz-placeholder {
+  font-weight: 400;
+}
+.search-form input:focus::-webkit-input-placeholder,
+.login-form input:focus::-webkit-input-placeholder {
+  font-weight: 400;
+}
+.search-form input:focus::-moz-placeholder,
+.login-form input:focus::-moz-placeholder {
+  font-weight: 400;
 }
 .search-form input:focus::-webkit-input-placeholder,
 .login-form input:focus::-webkit-input-placeholder {
@@ -960,6 +981,21 @@ main *:focus {
   background-color: var(--subscribe-bg);
 }
 
+@-webkit-keyframes bounce {
+  0% {
+    transform: translateY(1000px);
+  }
+  60% {
+    transform: translateY(-30px);
+  }
+  90% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 @keyframes bounce {
   0% {
     transform: translateY(1000px);
@@ -977,7 +1013,9 @@ main *:focus {
 
 .modal-show {
   display: flex;
+  -webkit-animation-name: bounce;
   animation-name: bounce;
+  -webkit-animation-duration: 0.6s;
   animation-duration: 0.6s;
 }
 
@@ -994,6 +1032,22 @@ main *:focus {
   padding-left: 14px;
   font-size: 16px;
   line-height: 20px;
+}
+.supscription-form input::-webkit-input-placeholder,
+.supscription-form textarea::-webkit-input-placeholder {
+  font-size: 16px;
+}
+.supscription-form input::-moz-placeholder,
+.supscription-form textarea::-moz-placeholder {
+  font-size: 16px;
+}
+.supscription-form input::-webkit-input-placeholder,
+.supscription-form textarea::-webkit-input-placeholder {
+  font-size: 16px;
+}
+.supscription-form input::-moz-placeholder,
+.supscription-form textarea::-moz-placeholder {
+  font-size: 16px;
 }
 .supscription-form input::-webkit-input-placeholder,
 .supscription-form textarea::-webkit-input-placeholder {
@@ -1099,11 +1153,14 @@ main *:focus {
 }
 
 .interactive-map {
-  min-width: 1200px;
-  height: 430px;
+  width: 100vw;
   position: absolute;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  height: 430px;
   z-index: 4;
-  left: -27px;
 }
 
 /* \\ location-window */
@@ -1113,7 +1170,6 @@ main *:focus {
   min-height: 306px;
   padding: 30px 25px;
   border-radius: 16px;
-  box-shadow: inset 0 0 0 1px var(--light-link-hover);
   background-color: var(--main-color);
   color: var(--main-color-dark);
   font-size: 14px;
@@ -1145,7 +1201,7 @@ main *:focus {
   text-decoration: none;
 }
 
-.our-location button {
+.our-location .sub-form-trigger {
   padding: 10px 28px;
 }
 
@@ -1512,6 +1568,10 @@ main *:focus {
   color: var(--main-color);
 }
 
+.filters-sort-item:hover {
+  cursor: pointer;
+}
+
 .filters-sort-item:hover ~ svg {
   fill: var(--main-color-dark);
 }
@@ -1522,6 +1582,9 @@ main *:focus {
 }
 
 /* \ price-range */
+.filters-price input[type="number"] {
+  display: none;
+}
 .price-slider {
   position: relative;
   width: 218px;
@@ -1566,6 +1629,7 @@ main *:focus {
   border: 9px solid var(--main-color);
   transform: translateY(-11px);
   left: 33px;
+  cursor: pointer;
 }
 
 .price-slider .slider-range-max {
@@ -1575,6 +1639,7 @@ main *:focus {
   border: 9px solid var(--main-color);
   transform: translateY(-11px);
   right: 65px;
+  cursor: pointer;
 }
 
 /* fat amount */
@@ -1587,6 +1652,9 @@ main *:focus {
 .fat-item label {
   position: relative;
   padding: 4px 0 5px 33px;
+}
+.fat-item label:hover {
+  cursor: pointer;
 }
 
 .fat-item .fat-input {
@@ -1656,6 +1724,10 @@ main *:focus {
   padding: 4px 0 5px 31px;
 }
 
+.addon-item label:hover {
+  cursor: pointer;
+}
+
 .addon-label::after {
   display: block;
   content: "";
@@ -1716,6 +1788,7 @@ main *:focus {
 .filters button[type="submit"]:hover {
   background-color: var(--main-color);
   color: var(--main-color-dark);
+  cursor: pointer;
 }
 
 .filters button[type="submit"]:active {
