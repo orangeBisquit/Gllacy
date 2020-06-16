@@ -753,6 +753,15 @@ main *:focus {
   background: url("../img/icons/hit.svg");
 }
 
+.assortment-descr {
+  width: 260px;
+  margin: 0;
+  padding-left: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+}
+
 .assortment-price {
   position: absolute;
   top: 208px;
@@ -762,15 +771,6 @@ main *:focus {
   line-height: 45px;
   font-weight: 700;
   text-shadow: 0px 1px 3px var(--transparent-half);
-}
-
-.assortment-descr {
-  width: 260px;
-  margin: 0;
-  padding-left: 4px;
-  font-size: 16px;
-  font-weight: 500;
-  text-align: center;
 }
 
 .assortment-price span {
@@ -792,7 +792,7 @@ main *:focus {
   position: absolute;
   top: -6px;
   left: -13px;
-  z-index: 999;
+  z-index: 10;
   padding-top: 60px;
   padding-bottom: 21px;
   padding-right: 13px;
@@ -938,7 +938,17 @@ main *:focus {
 
 .send-form input {
   min-width: 368px;
-  padding-left: 14px;
+  padding-left: 13px;
+}
+
+.send-form input:hover,
+.send-form input:focus {
+  padding-left: 12px;
+}
+
+.send-form input::placeholder {
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .send-form button {
@@ -1179,6 +1189,11 @@ main *:focus {
 
 .our-location p {
   margin: 0;
+}
+
+.location-address span,
+.location-phone span {
+  display: block;
 }
 
 .our-location b {
@@ -1557,7 +1572,8 @@ main *:focus {
 
 .filters-sort-item {
   width: 196px;
-  min-height: 36px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   padding-left: 16px;
   border: none;
   border-radius: 20px;
@@ -1566,6 +1582,7 @@ main *:focus {
   -moz-appearance: none;
   appearance: none;
   color: var(--main-color);
+  vertical-align: middle;
 }
 
 .filters-sort-item:hover {
