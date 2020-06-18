@@ -1313,6 +1313,7 @@ ul.no-bullets {
   background-repeat: no-repeat;
   width: 11px;
   height: 11px;
+  vertical-align: middle;
 }
 .item-data.item-image {
   padding-right: 6px;
@@ -1687,6 +1688,7 @@ ul.no-bullets {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  margin-bottom: 29px;
 }
 .pages-nav {
   display: flex;
