@@ -118,12 +118,11 @@
             </li>
           </ul>
           <div class="slider-btns">
-            <input class="slider-radio" type="radio" name="slider-radio" id="slider-radio-1" onchange="sliderChanger()"
-              checked>
+            <input class="slider-radio" type="radio" name="slider-radio" id="slider-radio-1" checked>
             <label for="slider-radio-1" class="slider-btn-item" aria-label="Первый слайд"></label>
-            <input class="slider-radio" type="radio" name="slider-radio" id="slider-radio-2" onchange="sliderChanger()">
+            <input class="slider-radio" type="radio" name="slider-radio" id="slider-radio-2">
             <label for="slider-radio-2" class="slider-btn-item" aria-label="Второй слайд"></label>
-            <input class="slider-radio" type="radio" name="slider-radio" id="slider-radio-3" onchange="sliderChanger()">
+            <input class="slider-radio" type="radio" name="slider-radio" id="slider-radio-3">
             <label for="slider-radio-3" class="slider-btn-item" aria-label="Третий слайд"></label>
           </div>
         </section>
@@ -217,28 +216,28 @@
             собственного производства на развес
           </h3>
           <ul class="about-us-layout no-bullets">
-            <li class="about-us-item">
+            <li class="about-us-item icon-ice-cream">
               <p>
                 Все наше мороженое изготавливается на собственном производстве, с
                 использованием современного оборудования и проверенных временем
                 технологий
               </p>
             </li>
-            <li class="about-us-item">
+            <li class="about-us-item icon-farm">
               <p>
                 Закупка ингредиентов производится только у проверенных фермерских
                 хозяйств и компаний, с которыми нас связывает долговременное
                 сотрудничество.
               </p>
             </li>
-            <li class="about-us-item">
+            <li class="about-us-item icon-eco">
               <p>
                 Для приготовления мороженого используются настоящие сливки и
                 молоко высочайшего качества. Все дополнительные ингредиенты и
                 добавки произведены из натурального, экологически чистого сырья.
               </p>
             </li>
-            <li class="about-us-item">
+            <li class="about-us-item icon-temp">
               <p>
                 Доставка нашего мороженого до заказчиков осуществляется в
                 специальном термопаке, который не дает мороженому растаять в пути
@@ -277,14 +276,14 @@
           <div class="our-location-wrapper">
             <h2 class="visually-hidden">Наш адрес</h2>
             <p class="location-address">
-              <span>Адрес главного офиса</span>
-              <span>и офлайн-магазина:</span>
+              Адрес главного офиса <br>
+              и офлайн-магазина:
             </p>
             <b class="location-address">ул. Большая Конюшенная, 19/8, Санкт-Петербург</b>
             <p class="location-phone">
-              <span>Для заказов по телефону</span>
-              <a class="basic-link-dark" href="tel:88124502525">8 812 450-25-25</a>
-              <span>(с 10 до 20 ежедневно)</span>
+              Для заказов по телефону <br>
+              <a class="basic-link-dark" href="tel:88124502525">8 812 450-25-25</a> <br>
+              (с 10 до 20 ежедневно)
             </p>
             <a href="form.html" class="sub-form-trigger basic-button">Форма обратной связи</a>
           </div>
@@ -359,19 +358,19 @@
         </button>
         <h3>Мы обязательно вам ответим!</h3>
         <input class="feedback-login basic-input" type="text" placeholder="Имя Фамилия" id="subscribe-name"
-          name="subscriber-name" required>
+          name="subscriber-name">
         <label for="subscribe-name" class="visually-hidden">Имя Фамилия</label>
-        <input class="basic-input" type="email" placeholder="email@example.com" id="subscribe-email"
-          name="subscriber-email" required>
+        <input class="feedback-email basic-input" type="email" placeholder="email@example.com" id="subscribe-email"
+          name="subscriber-email">
         <label for="subscribe-email" class="visually-hidden">Электронная почта</label>
-        <textarea class="basic-input" id="subscribe-message" placeholder="В свободной форме" name="subscriber-name"
-          required></textarea>
+        <textarea class="basic-input" id="subscribe-message" placeholder="В свободной форме"
+          name="subscriber-name"></textarea>
         <label class="visually-hidden" for="subscribe-message">Ваше сообщение</label>
         <button class="basic-button" type="submit">Отправить</button>
       </form>
     </section>
   </div>
-  <script src="js/script.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
