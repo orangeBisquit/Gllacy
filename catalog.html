@@ -176,8 +176,10 @@
             </fieldset>
             <fieldset class="filters-price">
               <legend>Цена: 100 &#8381; – 500 &#8381;</legend>
-              <input name="price-low" type="number" value="100">
-              <input name="price-high" type="number" value="500">
+              <input id="price-low" name="price-low" type="number" value="100">
+              <label class="visually-hidden" for="price-low"></label>
+              <input id="price-high" name="price-high" type="number" value="500">
+              <label class="visually-hidden" for="price-high"></label>
               <div class="price-slider">
                 <div class="slider-bar">
                   <div class="slider-bar-range">

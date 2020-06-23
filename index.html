@@ -246,7 +246,7 @@
             </li>
           </ul>
         </section>
-        <div class="index-column servings-row">
+        <div class="flex-column servings-row">
           <article class="types-of-serving">
             <h3>Новое в нашем блоге</h3>
             <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
@@ -260,7 +260,8 @@
                 всякой ненужной ерунды. Честно =)
               </p>
               <form class="send-form" method="post" action="https://echo.htmlacademy.ru">
-                <input class="basic-input" type="email" placeholder="email@example.com">
+                <input id="send-email" class="basic-input" type="email" placeholder="email@example.com" required>
+                <label class="visually-hidden" for="send-email"></label>
                 <button class="basic-button" type="submit">Отправить</button>
               </form>
             </div>

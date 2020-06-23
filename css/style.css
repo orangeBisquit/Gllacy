@@ -103,6 +103,11 @@ img {
   -moz-column-gap: 26px;
   column-gap: 26px;
 }
+
+.flex-column {
+  display: flex;
+  align-items: flex-start;
+}
 /* || UTILITIES */
 ul.no-bullets {
   padding: 0;
@@ -768,6 +773,7 @@ ul.no-bullets {
   outline: 2px solid var(--light-link-hover);
 }
 .types-of-serving {
+  margin-right: 28px;
   border-radius: 16px;
   background: url("../img/bg/strawberry-bg.jpg");
   background-color: var(--main-color);
@@ -806,6 +812,7 @@ ul.no-bullets {
   border-radius: 16px;
   background: url("../img/bg/subscribe-bg.png");
   background-repeat: no-repeat;
+  background-size: cover;
   padding: 5px;
   width: 560px;
   min-height: 220px;
@@ -1146,8 +1153,9 @@ ul.no-bullets {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 25px;
   border-top: 1px solid var(--transparent-light);
+  padding-top: 18px;
+  padding-bottom: 25px;
   min-height: 100px;
 }
 .footer *:focus {
